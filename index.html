@@ -20,15 +20,9 @@
   --shadow: 0 20px 60px rgba(26,26,46,0.12);
   --shadow-sm: 0 4px 20px rgba(26,26,46,0.08);
 }
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--cream);
-  color: var(--ink);
-  overflow-x: hidden;
-}
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
 
 /* ── NAV ── */
 nav {
@@ -40,378 +34,137 @@ nav {
   border-bottom: 1px solid rgba(255,107,107,0.12);
   transition: all 0.3s;
 }
-.nav-logo {
-  font-family: 'Fraunces', serif;
-  font-size: 1.8rem; font-weight: 900;
-  color: var(--coral);
-  letter-spacing: -0.02em;
-}
+.nav-logo { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 900; color: var(--coral); letter-spacing: -0.02em; }
 .nav-logo span { color: var(--mint); }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a {
-  text-decoration: none; color: var(--ink);
-  font-size: 0.9rem; font-weight: 500;
-  transition: color 0.2s;
-}
+.nav-links a { text-decoration: none; color: var(--ink); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
 .nav-links a:hover { color: var(--coral); }
 .nav-lang { display: flex; gap: 0.5rem; }
 .lang-btn {
   padding: 0.35rem 0.75rem;
-  border: 1.5px solid transparent;
-  border-radius: 20px;
-  background: none;
-  font-size: 0.8rem; font-weight: 600;
-  cursor: pointer; transition: all 0.2s;
-  color: var(--ink);
+  border: 1.5px solid transparent; border-radius: 20px;
+  background: none; font-size: 0.8rem; font-weight: 600;
+  cursor: pointer; transition: all 0.2s; color: var(--ink);
 }
-.lang-btn.active, .lang-btn:hover {
-  border-color: var(--coral);
-  color: var(--coral);
-  background: rgba(255,107,107,0.07);
-}
+.lang-btn.active, .lang-btn:hover { border-color: var(--coral); color: var(--coral); background: rgba(255,107,107,0.07); }
 .nav-cta {
-  padding: 0.6rem 1.4rem;
-  background: var(--coral);
-  color: white; border: none; border-radius: 25px;
-  font-size: 0.88rem; font-weight: 600;
-  cursor: pointer; transition: all 0.25s;
-  box-shadow: 0 4px 15px rgba(255,107,107,0.35);
+  padding: 0.6rem 1.4rem; background: var(--coral); color: white;
+  border: none; border-radius: 25px; font-size: 0.88rem; font-weight: 600;
+  cursor: pointer; transition: all 0.25s; box-shadow: 0 4px 15px rgba(255,107,107,0.35);
 }
 .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(255,107,107,0.45); }
 
 /* ── HERO ── */
 #hero {
-  min-height: 100vh;
-  padding: 7rem 5% 4rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 4rem;
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh; padding: 7rem 5% 4rem;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 4rem;
+  position: relative; overflow: hidden;
 }
-.hero-bg-blob {
-  position: absolute; border-radius: 50%;
-  filter: blur(80px); opacity: 0.35; z-index: 0;
-  animation: float 8s ease-in-out infinite;
-}
+.hero-bg-blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.35; z-index: 0; animation: float 8s ease-in-out infinite; }
 .blob-1 { width: 500px; height: 500px; background: var(--sun); top: -100px; right: -100px; animation-delay: 0s; }
 .blob-2 { width: 400px; height: 400px; background: var(--mint); bottom: -50px; left: 20%; animation-delay: 3s; }
 .blob-3 { width: 300px; height: 300px; background: var(--coral); top: 30%; right: 25%; animation-delay: 5s; }
-@keyframes float {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-30px) scale(1.05); }
-}
+@keyframes float { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-30px) scale(1.05); } }
 .hero-left { position: relative; z-index: 1; }
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  padding: 0.4rem 1rem;
-  background: rgba(255,179,71,0.15);
-  border: 1.5px solid var(--sun);
-  border-radius: 20px;
-  font-size: 0.82rem; font-weight: 600; color: #CC7700;
-  margin-bottom: 1.5rem;
-}
-.hero-badge span { font-size: 1rem; }
-h1 {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(3rem, 5.5vw, 5.2rem);
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.5rem;
-}
+.hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem; background: rgba(255,179,71,0.15); border: 1.5px solid var(--sun); border-radius: 20px; font-size: 0.82rem; font-weight: 600; color: #CC7700; margin-bottom: 1.5rem; }
+h1 { font-family: 'Fraunces', serif; font-size: clamp(3rem, 5.5vw, 5.2rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
 h1 .accent { color: var(--coral); font-style: italic; }
 h1 .accent2 { color: var(--mint); }
-.hero-desc {
-  font-size: 1.15rem; line-height: 1.7;
-  color: #555;
-  max-width: 480px;
-  margin-bottom: 2.5rem;
-}
+.hero-desc { font-size: 1.15rem; line-height: 1.7; color: #555; max-width: 480px; margin-bottom: 2.5rem; }
 .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn-primary {
-  padding: 0.9rem 2rem;
-  background: var(--coral); color: white;
-  border: none; border-radius: 30px;
-  font-size: 0.95rem; font-weight: 600;
-  cursor: pointer; transition: all 0.25s;
-  box-shadow: 0 6px 20px rgba(255,107,107,0.4);
-  text-decoration: none; display: inline-block;
-}
+.btn-primary { padding: 0.9rem 2rem; background: var(--coral); color: white; border: none; border-radius: 30px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.25s; box-shadow: 0 6px 20px rgba(255,107,107,0.4); text-decoration: none; display: inline-block; }
 .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(255,107,107,0.5); }
-.btn-secondary {
-  padding: 0.9rem 2rem;
-  background: transparent; color: var(--ink);
-  border: 2px solid var(--ink);
-  border-radius: 30px;
-  font-size: 0.95rem; font-weight: 600;
-  cursor: pointer; transition: all 0.25s;
-  text-decoration: none; display: inline-block;
-}
+.btn-secondary { padding: 0.9rem 2rem; background: transparent; color: var(--ink); border: 2px solid var(--ink); border-radius: 30px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-block; }
 .btn-secondary:hover { background: var(--ink); color: white; }
-.hero-stats {
-  display: flex; gap: 2.5rem;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(26,26,46,0.1);
-}
+.hero-stats { display: flex; gap: 2.5rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(26,26,46,0.1); }
 .stat-item { text-align: left; }
-.stat-num {
-  font-family: 'Fraunces', serif;
-  font-size: 2rem; font-weight: 900; color: var(--coral);
-  line-height: 1;
-}
+.stat-num { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 900; color: var(--coral); line-height: 1; }
 .stat-label { font-size: 0.78rem; color: #888; margin-top: 0.3rem; }
-
-/* Hero Right */
-.hero-right {
-  position: relative; z-index: 1;
-  display: flex; justify-content: center; align-items: center;
-}
-.phone-wrap {
-  position: relative;
-  animation: phone-float 6s ease-in-out infinite;
-}
-@keyframes phone-float {
-  0%, 100% { transform: translateY(0) rotate(-2deg); }
-  50% { transform: translateY(-20px) rotate(2deg); }
-}
-.phone-frame {
-  width: 300px; height: 580px;
-  background: var(--ink);
-  border-radius: 45px;
-  padding: 12px;
-  box-shadow: 0 40px 80px rgba(26,26,46,0.3), 0 0 0 1px rgba(255,255,255,0.1);
-  position: relative;
-  overflow: hidden;
-}
-.phone-screen {
-  width: 100%; height: 100%;
-  background: linear-gradient(135deg, #FFF8F0 0%, #FFE8D6 100%);
-  border-radius: 35px;
-  overflow: hidden;
-  display: flex; flex-direction: column;
-}
-.phone-topbar {
-  background: var(--coral); padding: 1rem 1.2rem;
-  color: white;
-}
+.hero-right { position: relative; z-index: 1; display: flex; justify-content: center; align-items: center; }
+.phone-wrap { position: relative; animation: phone-float 6s ease-in-out infinite; }
+@keyframes phone-float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-20px) rotate(2deg); } }
+.phone-frame { width: 300px; height: 580px; background: var(--ink); border-radius: 45px; padding: 12px; box-shadow: 0 40px 80px rgba(26,26,46,0.3), 0 0 0 1px rgba(255,255,255,0.1); position: relative; overflow: hidden; }
+.phone-screen { width: 100%; height: 100%; background: linear-gradient(135deg, #FFF8F0 0%, #FFE8D6 100%); border-radius: 35px; overflow: hidden; display: flex; flex-direction: column; }
+.phone-topbar { background: var(--coral); padding: 1rem 1.2rem; color: white; }
 .phone-topbar-title { font-size: 0.75rem; opacity: 0.8; }
 .phone-topbar-loc { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; }
 .phone-cards { padding: 0.8rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
-.phone-card {
-  border-radius: 16px; overflow: hidden;
-  background: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  display: flex; align-items: center; gap: 0.7rem;
-  padding: 0.7rem;
-  animation: slide-in 0.5s ease backwards;
-}
+.phone-card { border-radius: 16px; overflow: hidden; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 0.7rem; padding: 0.7rem; animation: slide-in 0.5s ease backwards; }
 .phone-card:nth-child(1) { animation-delay: 0.1s; }
 .phone-card:nth-child(2) { animation-delay: 0.2s; }
 .phone-card:nth-child(3) { animation-delay: 0.3s; }
 @keyframes slide-in { from { opacity: 0; transform: translateX(20px); } }
-.phone-card-img {
-  width: 52px; height: 52px; border-radius: 12px;
-  flex-shrink: 0; display: flex; align-items: center; justify-content: center;
-  font-size: 1.6rem;
-}
+.phone-card-img { width: 52px; height: 52px; border-radius: 12px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; }
 .phone-card-info { flex: 1; }
 .phone-card-title { font-size: 0.72rem; font-weight: 600; color: var(--ink); }
 .phone-card-sub { font-size: 0.62rem; color: #999; margin-top: 0.1rem; }
-.phone-card-tag {
-  font-size: 0.58rem; font-weight: 700;
-  padding: 0.2rem 0.5rem; border-radius: 8px;
-  background: rgba(255,107,107,0.12); color: var(--coral);
-}
-.phone-bottom-bar {
-  background: white; border-top: 1px solid #eee;
-  display: flex; justify-content: space-around;
-  padding: 0.7rem;
-}
+.phone-card-tag { font-size: 0.58rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 8px; background: rgba(255,107,107,0.12); color: var(--coral); }
+.phone-bottom-bar { background: white; border-top: 1px solid #eee; display: flex; justify-content: space-around; padding: 0.7rem; }
 .phone-bottom-btn { font-size: 1.2rem; opacity: 0.5; cursor: pointer; }
 .phone-bottom-btn.active { opacity: 1; }
-.float-tag {
-  position: absolute;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.8rem; font-weight: 600;
-  box-shadow: var(--shadow-sm);
-  animation: tag-float 5s ease-in-out infinite;
-  white-space: nowrap;
-}
+.float-tag { position: absolute; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; box-shadow: var(--shadow-sm); animation: tag-float 5s ease-in-out infinite; white-space: nowrap; }
 .tag-1 { background: var(--sun); color: #664400; top: 10%; left: -80px; animation-delay: 0s; }
 .tag-2 { background: var(--mint); color: #1A5E58; top: 40%; right: -90px; animation-delay: 1.5s; }
 .tag-3 { background: white; color: var(--ink); bottom: 20%; left: -70px; animation-delay: 3s; box-shadow: var(--shadow); }
-@keyframes tag-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
+@keyframes tag-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
 /* ── SECTION COMMONS ── */
 section { padding: 6rem 5%; }
-.section-tag {
-  display: inline-block;
-  padding: 0.35rem 1rem;
-  background: rgba(255,107,107,0.1);
-  border-radius: 20px;
-  font-size: 0.78rem; font-weight: 700;
-  color: var(--coral); letter-spacing: 0.05em; text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-.section-title {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 900; line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
-}
+.section-tag { display: inline-block; padding: 0.35rem 1rem; background: rgba(255,107,107,0.1); border-radius: 20px; font-size: 0.78rem; font-weight: 700; color: var(--coral); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1rem; }
+.section-title { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 900; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1rem; }
 .section-sub { font-size: 1.05rem; color: #666; line-height: 1.7; max-width: 560px; }
 
-/* ── LAYER SECTION ── */
+/* ── LAYERS ── */
 #layers { background: var(--ink); }
 #layers .section-tag { background: rgba(255,107,107,0.2); color: #FF9999; }
 #layers .section-title { color: white; }
 #layers .section-sub { color: rgba(255,255,255,0.6); }
 .layers-header { text-align: center; margin-bottom: 4rem; }
 .layers-header .section-sub { margin: 0 auto; }
-.layers-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-.layer-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 28px;
-  padding: 2.5rem 2rem;
-  transition: all 0.35s;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-.layer-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0; height: 4px;
-  border-radius: 4px 4px 0 0;
-  transition: opacity 0.3s;
-}
+.layers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.layer-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 28px; padding: 2.5rem 2rem; transition: all 0.35s; cursor: pointer; position: relative; overflow: hidden; }
+.layer-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; border-radius: 4px 4px 0 0; transition: opacity 0.3s; }
 .layer-card.discover::before { background: var(--sun); }
 .layer-card.explore::before { background: var(--coral); }
 .layer-card.connect::before { background: var(--mint); }
-.layer-card:hover {
-  transform: translateY(-8px);
-  background: rgba(255,255,255,0.09);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-}
-.layer-num {
-  font-family: 'Fraunces', serif;
-  font-size: 0.8rem; font-weight: 700;
-  letter-spacing: 0.1em;
-  margin-bottom: 1.2rem;
-}
+.layer-card:hover { transform: translateY(-8px); background: rgba(255,255,255,0.09); box-shadow: 0 25px 50px rgba(0,0,0,0.3); }
+.layer-num { font-family: 'Fraunces', serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; margin-bottom: 1.2rem; }
 .layer-card.discover .layer-num { color: var(--sun); }
 .layer-card.explore .layer-num { color: var(--coral); }
 .layer-card.connect .layer-num { color: var(--mint); }
-.layer-icon {
-  width: 64px; height: 64px; border-radius: 18px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.8rem; margin-bottom: 1.5rem;
-}
+.layer-icon { width: 64px; height: 64px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 1.5rem; }
 .layer-card.discover .layer-icon { background: rgba(255,179,71,0.15); }
 .layer-card.explore .layer-icon { background: rgba(255,107,107,0.15); }
 .layer-card.connect .layer-icon { background: rgba(78,205,196,0.15); }
-.layer-title {
-  font-family: 'Fraunces', serif;
-  font-size: 1.5rem; font-weight: 700; color: white;
-  margin-bottom: 0.5rem;
-}
+.layer-title { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 0.5rem; }
 .layer-sub { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
 .layer-desc { font-size: 0.92rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 1.5rem; }
 .layer-features { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-.layer-features li {
-  display: flex; align-items: center; gap: 0.6rem;
-  font-size: 0.85rem; color: rgba(255,255,255,0.6);
-}
-.layer-features li::before {
-  content: ''; width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
-}
+.layer-features li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+.layer-features li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
 .layer-card.discover .layer-features li::before { background: var(--sun); }
 .layer-card.explore .layer-features li::before { background: var(--coral); }
 .layer-card.connect .layer-features li::before { background: var(--mint); }
 
 /* ── COURSES ── */
 #courses { background: var(--soft); }
-.courses-header {
-  display: flex; justify-content: space-between; align-items: flex-end;
-  margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem;
-}
+.courses-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
 .filter-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-.filter-tab {
-  padding: 0.45rem 1.1rem;
-  border: 1.5px solid #ddd;
-  border-radius: 20px;
-  background: white; color: #666;
-  font-size: 0.82rem; font-weight: 500;
-  cursor: pointer; transition: all 0.2s;
-}
-.filter-tab.active, .filter-tab:hover {
-  border-color: var(--coral); color: var(--coral);
-  background: rgba(255,107,107,0.07);
-}
-.courses-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.8rem;
-}
-.course-card {
-  background: white; border-radius: 24px;
-  overflow: hidden; box-shadow: var(--shadow-sm);
-  transition: all 0.3s; cursor: pointer;
-}
-.course-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 25px 50px rgba(26,26,46,0.15);
-}
-.course-img {
-  height: 200px; position: relative; overflow: hidden;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 5rem;
-}
-.course-img-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to bottom, transparent 50%, rgba(26,26,46,0.6));
-}
-.course-badge {
-  position: absolute; top: 1rem; left: 1rem;
-  padding: 0.3rem 0.75rem;
-  border-radius: 12px;
-  font-size: 0.72rem; font-weight: 700;
-  background: white; color: var(--ink);
-}
-.course-duration {
-  position: absolute; bottom: 1rem; right: 1rem;
-  padding: 0.3rem 0.75rem;
-  border-radius: 12px;
-  font-size: 0.72rem; font-weight: 600;
-  background: rgba(255,255,255,0.9); color: var(--ink);
-}
+.filter-tab { padding: 0.45rem 1.1rem; border: 1.5px solid #ddd; border-radius: 20px; background: white; color: #666; font-size: 0.82rem; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+.filter-tab.active, .filter-tab:hover { border-color: var(--coral); color: var(--coral); background: rgba(255,107,107,0.07); }
+.courses-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.8rem; }
+.course-card { background: white; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-sm); transition: all 0.3s; cursor: pointer; }
+.course-card:hover { transform: translateY(-6px); box-shadow: 0 25px 50px rgba(26,26,46,0.15); }
+.course-img { height: 200px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+.course-img-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(26,26,46,0.6)); }
+.course-badge { position: absolute; top: 1rem; left: 1rem; padding: 0.3rem 0.75rem; border-radius: 12px; font-size: 0.72rem; font-weight: 700; background: white; color: var(--ink); }
+.course-duration { position: absolute; bottom: 1rem; right: 1rem; padding: 0.3rem 0.75rem; border-radius: 12px; font-size: 0.72rem; font-weight: 600; background: rgba(255,255,255,0.9); color: var(--ink); }
 .course-body { padding: 1.5rem; }
-.course-location {
-  display: flex; align-items: center; gap: 0.3rem;
-  font-size: 0.78rem; color: #999; margin-bottom: 0.5rem;
-}
-.course-title {
-  font-family: 'Fraunces', serif;
-  font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
+.course-location { display: flex; align-items: center; gap: 0.3rem; font-size: 0.78rem; color: #999; margin-bottom: 0.5rem; }
+.course-title { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; }
 .course-desc { font-size: 0.85rem; color: #666; line-height: 1.6; margin-bottom: 1rem; }
-.course-footer {
-  display: flex; align-items: center; justify-content: space-between;
-  padding-top: 1rem; border-top: 1px solid #f0f0f0;
-}
+.course-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid #f0f0f0; }
 .course-price { font-size: 0.82rem; color: #999; }
 .course-price strong { font-size: 1.1rem; color: var(--ink); font-weight: 700; }
 .course-rating { display: flex; align-items: center; gap: 0.3rem; font-size: 0.82rem; font-weight: 600; }
@@ -426,185 +179,215 @@ section { padding: 6rem 5%; }
 #hosts { background: var(--cream); }
 .hosts-header { text-align: center; margin-bottom: 3.5rem; }
 .hosts-header .section-sub { margin: 0 auto; }
-.hosts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.8rem;
-}
-.host-card {
-  background: white; border-radius: 24px; padding: 2rem;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s; cursor: pointer;
-  display: flex; flex-direction: column; align-items: center; text-align: center;
-}
-.host-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 25px 50px rgba(26,26,46,0.13);
-}
-.host-avatar {
-  width: 80px; height: 80px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 2.5rem; margin-bottom: 1rem;
-  position: relative;
-}
-.host-avatar::after {
-  content: '✓';
-  position: absolute; bottom: 2px; right: 2px;
-  width: 22px; height: 22px; border-radius: 50%;
-  background: var(--mint); color: white;
-  font-size: 0.7rem; font-weight: 700;
-  display: flex; align-items: center; justify-content: center;
-}
+.hosts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.8rem; }
+.host-card { background: white; border-radius: 24px; padding: 2rem; box-shadow: var(--shadow-sm); transition: all 0.3s; cursor: pointer; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.host-card:hover { transform: translateY(-6px); box-shadow: 0 25px 50px rgba(26,26,46,0.13); }
+.host-avatar { width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 1rem; position: relative; }
+.host-avatar::after { content: '✓'; position: absolute; bottom: 2px; right: 2px; width: 22px; height: 22px; border-radius: 50%; background: var(--mint); color: white; font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
 .host-name { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.3rem; }
 .host-role { font-size: 0.8rem; color: var(--coral); font-weight: 600; margin-bottom: 0.4rem; }
 .host-location { font-size: 0.78rem; color: #999; margin-bottom: 0.8rem; }
 .host-desc { font-size: 0.85rem; color: #555; line-height: 1.6; margin-bottom: 1.2rem; }
 .host-langs { display: flex; gap: 0.4rem; flex-wrap: wrap; justify-content: center; }
-.host-lang {
-  padding: 0.25rem 0.65rem;
-  background: var(--soft);
-  border-radius: 12px;
-  font-size: 0.72rem; font-weight: 600; color: #555;
-}
-.host-stats {
-  display: flex; gap: 1.5rem; margin-top: 1.2rem;
-  padding-top: 1.2rem; border-top: 1px solid #f0f0f0;
-  width: 100%;
-}
+.host-lang { padding: 0.25rem 0.65rem; background: var(--soft); border-radius: 12px; font-size: 0.72rem; font-weight: 600; color: #555; }
+.host-stats { display: flex; gap: 1.5rem; margin-top: 1.2rem; padding-top: 1.2rem; border-top: 1px solid #f0f0f0; width: 100%; }
 .host-stat { text-align: center; flex: 1; }
 .host-stat-num { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 700; color: var(--coral); }
 .host-stat-lbl { font-size: 0.68rem; color: #aaa; }
 
 /* ── MULTILANG CTA ── */
-#multilang {
-  background: linear-gradient(135deg, var(--coral) 0%, #FF8E53 100%);
-  text-align: center; padding: 5rem 5%;
-  position: relative; overflow: hidden;
-}
-#multilang::before {
-  content: ''; position: absolute;
-  width: 600px; height: 600px; border-radius: 50%;
-  background: rgba(255,255,255,0.06);
-  top: -200px; right: -100px;
-}
+#multilang { background: linear-gradient(135deg, var(--coral) 0%, #FF8E53 100%); text-align: center; padding: 5rem 5%; position: relative; overflow: hidden; }
+#multilang::before { content: ''; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: rgba(255,255,255,0.06); top: -200px; right: -100px; }
 #multilang .section-tag { background: rgba(255,255,255,0.2); color: white; }
 #multilang .section-title { color: white; }
 #multilang .section-sub { color: rgba(255,255,255,0.85); margin: 0 auto 2.5rem; }
-.lang-flags {
-  display: flex; justify-content: center; gap: 1.2rem;
-  flex-wrap: wrap; margin-bottom: 2.5rem;
-}
-.lang-flag {
-  display: flex; align-items: center; gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  background: rgba(255,255,255,0.18);
-  border: 1.5px solid rgba(255,255,255,0.3);
-  border-radius: 25px;
-  color: white; font-size: 0.88rem; font-weight: 600;
-  cursor: pointer; transition: all 0.2s;
-  backdrop-filter: blur(8px);
-}
+.lang-flags { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.lang-flag { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.18); border: 1.5px solid rgba(255,255,255,0.3); border-radius: 25px; color: white; font-size: 0.88rem; font-weight: 600; cursor: pointer; transition: all 0.2s; backdrop-filter: blur(8px); }
 .lang-flag:hover { background: rgba(255,255,255,0.28); transform: scale(1.05); }
 .lang-flag.active { background: white; color: var(--coral); }
-.multilang-desc {
-  font-size: 1rem; color: rgba(255,255,255,0.9);
-  line-height: 1.8; max-width: 600px; margin: 0 auto 2.5rem;
-}
-.btn-white {
-  padding: 0.9rem 2.5rem;
-  background: white; color: var(--coral);
-  border: none; border-radius: 30px;
-  font-size: 1rem; font-weight: 700;
-  cursor: pointer; transition: all 0.25s;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  text-decoration: none; display: inline-block;
-}
+.multilang-desc { font-size: 1rem; color: rgba(255,255,255,0.9); line-height: 1.8; max-width: 600px; margin: 0 auto 2.5rem; }
+.btn-white { padding: 0.9rem 2.5rem; background: white; color: var(--coral); border: none; border-radius: 30px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.25s; box-shadow: 0 8px 25px rgba(0,0,0,0.15); text-decoration: none; display: inline-block; }
 .btn-white:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(0,0,0,0.2); }
 
-/* ── ABOUT / FOUNDER ── */
-#about {
-  background: var(--soft);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 5rem;
-  padding: 6rem 5%;
-}
-.about-visual {
-  position: relative; display: flex; justify-content: center;
-}
-.about-card-main {
-  width: 320px;
-  background: var(--ink); border-radius: 28px; padding: 2.5rem;
-  color: white;
-  box-shadow: var(--shadow);
-  position: relative; z-index: 1;
-}
-.about-card-main .avatar {
-  width: 80px; height: 80px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--coral), var(--sun));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 2rem; margin-bottom: 1.2rem;
-}
-.about-card-main .founder-name {
-  font-family: 'Fraunces', serif;
-  font-size: 1.5rem; font-weight: 700; margin-bottom: 0.3rem;
-}
+/* ── ABOUT ── */
+#about { background: var(--soft); display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 5rem; padding: 6rem 5%; }
+.about-visual { position: relative; display: flex; justify-content: center; }
+.about-card-main { width: 320px; background: var(--ink); border-radius: 28px; padding: 2.5rem; color: white; box-shadow: var(--shadow); position: relative; z-index: 1; }
+.about-card-main .avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--coral), var(--sun)); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 1.2rem; }
+.about-card-main .founder-name { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.3rem; }
 .about-card-main .founder-title { font-size: 0.82rem; color: var(--mint); margin-bottom: 1.5rem; }
 .about-card-main .founder-creds { display: flex; flex-direction: column; gap: 0.7rem; }
 .cred-item { display: flex; align-items: flex-start; gap: 0.7rem; font-size: 0.85rem; }
 .cred-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.05rem; }
 .cred-text { color: rgba(255,255,255,0.75); line-height: 1.4; }
-.about-float-card {
-  position: absolute;
-  background: white; border-radius: 16px; padding: 1rem 1.3rem;
-  box-shadow: var(--shadow); font-size: 0.82rem;
-  animation: tag-float 5s ease-in-out infinite;
-}
+.about-float-card { position: absolute; background: white; border-radius: 16px; padding: 1rem 1.3rem; box-shadow: var(--shadow); font-size: 0.82rem; animation: tag-float 5s ease-in-out infinite; }
 .afc-1 { top: -20px; right: -10px; animation-delay: 0s; }
 .afc-2 { bottom: 30px; left: -20px; animation-delay: 2s; }
 .afc-1 strong, .afc-2 strong { display: block; font-family: 'Fraunces', serif; font-size: 1.3rem; color: var(--coral); }
 .about-right .section-sub { margin-bottom: 2rem; }
 .about-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.pillar {
-  padding: 1.2rem; border-radius: 16px;
-  background: white; box-shadow: var(--shadow-sm);
-}
+.pillar { padding: 1.2rem; border-radius: 16px; background: white; box-shadow: var(--shadow-sm); }
 .pillar-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
 .pillar-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.3rem; }
 .pillar-desc { font-size: 0.78rem; color: #777; line-height: 1.5; }
 
 /* ── FOOTER ── */
-footer {
-  background: var(--ink); color: rgba(255,255,255,0.7);
-  padding: 4rem 5% 2rem;
-}
-.footer-top {
-  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 3rem; margin-bottom: 3rem;
-}
+footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 4rem 5% 2rem; }
+.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
 .footer-brand .nav-logo { font-size: 2rem; display: block; margin-bottom: 1rem; }
 .footer-brand p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.5); max-width: 280px; }
 .footer-col h4 { font-size: 0.85rem; font-weight: 700; color: white; margin-bottom: 1rem; letter-spacing: 0.05em; text-transform: uppercase; }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
 .footer-col ul a { text-decoration: none; color: rgba(255,255,255,0.5); font-size: 0.85rem; transition: color 0.2s; }
 .footer-col ul a:hover { color: var(--coral); }
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 1.5rem;
-  display: flex; justify-content: space-between; align-items: center;
-  font-size: 0.8rem; color: rgba(255,255,255,0.3);
-}
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: rgba(255,255,255,0.3); }
 
 /* ── SCROLL ANIMATIONS ── */
-.reveal {
-  opacity: 0; transform: translateY(30px);
-  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ══════════════════════════════════════
+   AI CHATBOT
+══════════════════════════════════════ */
+#chat-btn {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 200;
+  width: 62px; height: 62px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--coral), #FF8E53);
+  border: none; cursor: pointer;
+  box-shadow: 0 8px 30px rgba(255,107,107,0.5);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+  animation: pulse-btn 3s ease-in-out infinite;
+}
+@keyframes pulse-btn {
+  0%, 100% { box-shadow: 0 8px 30px rgba(255,107,107,0.5); }
+  50% { box-shadow: 0 8px 40px rgba(255,107,107,0.8), 0 0 0 8px rgba(255,107,107,0.1); }
+}
+#chat-btn:hover { transform: scale(1.1); }
+#chat-btn .chat-badge {
+  position: absolute; top: -4px; right: -4px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--mint); color: white;
+  font-size: 0.6rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid white;
+}
+
+#chat-window {
+  position: fixed; bottom: 6.5rem; right: 2rem; z-index: 200;
+  width: 380px; height: 560px;
+  background: white; border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(26,26,46,0.25);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.8) translateY(20px);
+  opacity: 0; pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: bottom right;
+}
+#chat-window.open {
+  transform: scale(1) translateY(0);
+  opacity: 1; pointer-events: all;
+}
+
+.chat-header {
+  background: linear-gradient(135deg, var(--coral), #FF8E53);
+  padding: 1.2rem 1.4rem;
+  display: flex; align-items: center; gap: 0.8rem;
+  position: relative;
+}
+.chat-header-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0;
+}
+.chat-header-info { flex: 1; }
+.chat-header-name { font-weight: 700; color: white; font-size: 0.95rem; }
+.chat-header-status { font-size: 0.75rem; color: rgba(255,255,255,0.85); display: flex; align-items: center; gap: 0.3rem; }
+.chat-header-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #4cff91; display: inline-block; }
+.chat-close { background: rgba(255,255,255,0.2); border: none; color: white; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+.chat-close:hover { background: rgba(255,255,255,0.35); }
+
+.chat-lang-bar {
+  padding: 0.5rem 1rem;
+  background: var(--soft);
+  border-bottom: 1px solid #f0f0f0;
+  display: flex; gap: 0.4rem; align-items: center;
+  font-size: 0.72rem; color: #999;
+}
+.chat-lang-bar span { margin-right: 0.3rem; }
+.chat-lang-pill {
+  padding: 0.2rem 0.6rem; border-radius: 10px;
+  background: white; border: 1px solid #e0e0e0;
+  font-size: 0.7rem; cursor: pointer; transition: all 0.2s;
+  color: #555;
+}
+.chat-lang-pill.active { background: var(--coral); color: white; border-color: var(--coral); }
+
+.chat-messages {
+  flex: 1; overflow-y: auto; padding: 1rem;
+  display: flex; flex-direction: column; gap: 0.8rem;
+  scroll-behavior: smooth;
+}
+.chat-messages::-webkit-scrollbar { width: 4px; }
+.chat-messages::-webkit-scrollbar-thumb { background: #e0e0e0; border-radius: 4px; }
+
+.msg { display: flex; gap: 0.6rem; align-items: flex-end; max-width: 90%; }
+.msg.user { align-self: flex-end; flex-direction: row-reverse; }
+.msg-bubble {
+  padding: 0.75rem 1rem; border-radius: 18px;
+  font-size: 0.88rem; line-height: 1.55;
+  max-width: 280px;
+}
+.msg.bot .msg-bubble { background: var(--soft); color: var(--ink); border-bottom-left-radius: 4px; }
+.msg.user .msg-bubble { background: var(--coral); color: white; border-bottom-right-radius: 4px; }
+.msg-avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--coral), var(--sun)); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; flex-shrink: 0; }
+
+.chat-quick-btns {
+  padding: 0.5rem 1rem;
+  display: flex; gap: 0.4rem; flex-wrap: wrap;
+  border-top: 1px solid #f5f5f5;
+}
+.quick-btn {
+  padding: 0.35rem 0.8rem; border-radius: 16px;
+  border: 1.5px solid #e0e0e0; background: white;
+  font-size: 0.75rem; cursor: pointer; transition: all 0.2s; color: #555;
+  white-space: nowrap;
+}
+.quick-btn:hover { border-color: var(--coral); color: var(--coral); background: rgba(255,107,107,0.05); }
+
+.chat-input-row {
+  padding: 0.8rem 1rem;
+  display: flex; gap: 0.5rem; align-items: center;
+  border-top: 1px solid #f0f0f0;
+}
+.chat-input {
+  flex: 1; padding: 0.65rem 1rem;
+  border: 1.5px solid #e8e8e8; border-radius: 20px;
+  font-size: 0.88rem; font-family: 'DM Sans', sans-serif;
+  outline: none; transition: border-color 0.2s;
+  background: var(--soft);
+}
+.chat-input:focus { border-color: var(--coral); background: white; }
+.chat-send {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--coral); border: none; color: white;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; transition: all 0.2s; flex-shrink: 0;
+}
+.chat-send:hover { background: #e05555; transform: scale(1.05); }
+.chat-send:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+
+.typing-indicator { display: flex; gap: 4px; padding: 0.75rem 1rem; }
+.typing-dot { width: 8px; height: 8px; border-radius: 50%; background: #ccc; animation: typing 1.2s infinite; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes typing { 0%, 60%, 100% { transform: translateY(0); opacity: 0.4; } 30% { transform: translateY(-6px); opacity: 1; } }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
@@ -615,6 +398,7 @@ footer {
   .about-visual { display: none; }
   .footer-top { grid-template-columns: 1fr 1fr; }
   .nav-links { display: none; }
+  #chat-window { width: calc(100vw - 2rem); right: 1rem; }
 }
 @media (max-width: 600px) {
   .footer-top { grid-template-columns: 1fr; }
@@ -635,10 +419,10 @@ footer {
   </ul>
   <div style="display:flex;align-items:center;gap:1rem;">
     <div class="nav-lang">
-      <button class="lang-btn active" onclick="setLang('en')">EN</button>
-      <button class="lang-btn" onclick="setLang('ko')">KO</button>
-      <button class="lang-btn" onclick="setLang('ja')">JA</button>
-      <button class="lang-btn" onclick="setLang('zh')">中</button>
+      <button class="lang-btn active" onclick="setLang('en',this)">EN</button>
+      <button class="lang-btn" onclick="setLang('ko',this)">KO</button>
+      <button class="lang-btn" onclick="setLang('ja',this)">JA</button>
+      <button class="lang-btn" onclick="setLang('zh',this)">中</button>
     </div>
     <button class="nav-cta" data-i18n="nav.cta">Start Exploring</button>
   </div>
@@ -649,37 +433,20 @@ footer {
   <div class="hero-bg-blob blob-1"></div>
   <div class="hero-bg-blob blob-2"></div>
   <div class="hero-bg-blob blob-3"></div>
-
   <div class="hero-left reveal">
     <div class="hero-badge"><span>✈️</span> <span data-i18n="hero.badge">Incheon Airport → Gyeonggi in minutes</span></div>
-    <h1 data-i18n-html="hero.title">
-      Discover<br>
-      <span class="accent">Korea's</span><br>
-      <span class="accent2">Hidden Heart</span>
-    </h1>
-    <p class="hero-desc" data-i18n="hero.desc">
-      NORI connects foreign travelers directly to Gyeonggi's local treasures — from ancient pottery villages to living farm experiences — all in your language.
-    </p>
+    <h1 data-i18n-html="hero.title">Discover<br><span class="accent">Korea's</span><br><span class="accent2">Hidden Heart</span></h1>
+    <p class="hero-desc" data-i18n="hero.desc">NORI connects foreign travelers directly to Gyeonggi's local treasures — from ancient pottery villages to living farm experiences — all in your language.</p>
     <div class="hero-btns">
       <a href="#courses" class="btn-primary" data-i18n="hero.btn1">🗺 Explore Courses</a>
       <a href="#hosts" class="btn-secondary" data-i18n="hero.btn2">Meet Local Hosts</a>
     </div>
     <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">31</div>
-        <div class="stat-label" data-i18n="hero.stat1">Cities & Counties</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">8</div>
-        <div class="stat-label" data-i18n="hero.stat2">Languages Supported</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">50+</div>
-        <div class="stat-label" data-i18n="hero.stat3">Local Hosts</div>
-      </div>
+      <div class="stat-item"><div class="stat-num">31</div><div class="stat-label" data-i18n="hero.stat1">Cities & Counties</div></div>
+      <div class="stat-item"><div class="stat-num">8</div><div class="stat-label" data-i18n="hero.stat2">Languages Supported</div></div>
+      <div class="stat-item"><div class="stat-num">50+</div><div class="stat-label" data-i18n="hero.stat3">Local Hosts</div></div>
     </div>
   </div>
-
   <div class="hero-right reveal reveal-delay-2">
     <div class="phone-wrap">
       <div class="float-tag tag-1">🏺 <span data-i18n="phone.tag1">Icheon Pottery</span></div>
@@ -729,14 +496,13 @@ footer {
   </div>
 </section>
 
-<!-- 3-LAYER PLATFORM -->
+<!-- 3-LAYER -->
 <section id="layers">
   <div class="layers-header reveal">
     <div class="section-tag" data-i18n="layers.tag">How NORI Works</div>
     <h2 class="section-title" style="color:white;" data-i18n="layers.title">The 3-Layer Experience</h2>
     <p class="section-sub" data-i18n="layers.sub">From the moment you land at Incheon to the memories you take home — NORI guides every step.</p>
   </div>
-
   <div class="layers-grid">
     <div class="layer-card discover reveal">
       <div class="layer-num" data-i18n="layers.l1.num">01 — DISCOVER</div>
@@ -751,7 +517,6 @@ footer {
         <li data-i18n="layers.l1.f4">Transport & direction integration</li>
       </ul>
     </div>
-
     <div class="layer-card explore reveal reveal-delay-1">
       <div class="layer-num" data-i18n="layers.l2.num">02 — EXPLORE</div>
       <div class="layer-icon">🗺️</div>
@@ -765,7 +530,6 @@ footer {
         <li data-i18n="layers.l2.f4">Live local event info</li>
       </ul>
     </div>
-
     <div class="layer-card connect reveal reveal-delay-2">
       <div class="layer-num" data-i18n="layers.l3.num">03 — CONNECT</div>
       <div class="layer-icon">🤝</div>
@@ -797,114 +561,30 @@ footer {
       <button class="filter-tab" onclick="filterCourse(this,'food')" data-i18n="filter.food">🍜 Food</button>
     </div>
   </div>
-
   <div class="courses-grid">
     <div class="course-card reveal" data-cat="craft">
-      <div class="course-img bg-pottery">
-        🏺
-        <div class="course-img-overlay"></div>
-        <div class="course-badge" data-i18n="course1.badge">⭐ Top Pick</div>
-        <div class="course-duration" data-i18n="course1.dur">⏱ 3hrs</div>
-      </div>
-      <div class="course-body">
-        <div class="course-location" data-i18n="course1.loc">📍 Icheon, Gyeonggi</div>
-        <div class="course-title" data-i18n="course1.title">Traditional Celadon Pottery Workshop</div>
-        <div class="course-desc" data-i18n="course1.desc">Shape your own masterpiece with a 5th-generation master potter in Icheon, Korea's pottery capital.</div>
-        <div class="course-footer">
-          <div class="course-price" data-i18n-html="course1.price">From <strong>₩45,000</strong></div>
-          <div class="course-rating">⭐ 4.9 (128)</div>
-        </div>
-      </div>
+      <div class="course-img bg-pottery">🏺<div class="course-img-overlay"></div><div class="course-badge" data-i18n="course1.badge">⭐ Top Pick</div><div class="course-duration" data-i18n="course1.dur">⏱ 3hrs</div></div>
+      <div class="course-body"><div class="course-location" data-i18n="course1.loc">📍 Icheon, Gyeonggi</div><div class="course-title" data-i18n="course1.title">Traditional Celadon Pottery Workshop</div><div class="course-desc" data-i18n="course1.desc">Shape your own masterpiece with a 5th-generation master potter in Icheon, Korea's pottery capital.</div><div class="course-footer"><div class="course-price" data-i18n-html="course1.price">From <strong>₩45,000</strong></div><div class="course-rating">⭐ 4.9 (128)</div></div></div>
     </div>
-
     <div class="course-card reveal reveal-delay-1" data-cat="nature">
-      <div class="course-img bg-farm">
-        🌾
-        <div class="course-img-overlay"></div>
-        <div class="course-badge" data-i18n="course2.badge">🔥 Hot</div>
-        <div class="course-duration" data-i18n="course2.dur">⏱ Full Day</div>
-      </div>
-      <div class="course-body">
-        <div class="course-location" data-i18n="course2.loc">📍 Yangpyeong, Gyeonggi</div>
-        <div class="course-title" data-i18n="course2.title">Organic Farm Stay & Rice Harvest</div>
-        <div class="course-desc" data-i18n="course2.desc">Wake up to mountain views, harvest organic rice, and enjoy a farm-to-table lunch with a local family.</div>
-        <div class="course-footer">
-          <div class="course-price" data-i18n-html="course2.price">From <strong>₩85,000</strong></div>
-          <div class="course-rating">⭐ 4.8 (96)</div>
-        </div>
-      </div>
+      <div class="course-img bg-farm">🌾<div class="course-img-overlay"></div><div class="course-badge" data-i18n="course2.badge">🔥 Hot</div><div class="course-duration" data-i18n="course2.dur">⏱ Full Day</div></div>
+      <div class="course-body"><div class="course-location" data-i18n="course2.loc">📍 Yangpyeong, Gyeonggi</div><div class="course-title" data-i18n="course2.title">Organic Farm Stay & Rice Harvest</div><div class="course-desc" data-i18n="course2.desc">Wake up to mountain views, harvest organic rice, and enjoy a farm-to-table lunch with a local family.</div><div class="course-footer"><div class="course-price" data-i18n-html="course2.price">From <strong>₩85,000</strong></div><div class="course-rating">⭐ 4.8 (96)</div></div></div>
     </div>
-
     <div class="course-card reveal reveal-delay-2" data-cat="history">
-      <div class="course-img bg-history">
-        🏯
-        <div class="course-img-overlay"></div>
-        <div class="course-badge" data-i18n="course3.badge">🏛 UNESCO</div>
-        <div class="course-duration" data-i18n="course3.dur">⏱ 2hrs</div>
-      </div>
-      <div class="course-body">
-        <div class="course-location" data-i18n="course3.loc">📍 Suwon, Gyeonggi</div>
-        <div class="course-title" data-i18n="course3.title">Hwaseong Fortress Secret Walk</div>
-        <div class="course-desc" data-i18n="course3.desc">Explore the 18th-century UNESCO World Heritage fortress with a historian guide — secrets most tourists never hear.</div>
-        <div class="course-footer">
-          <div class="course-price" data-i18n-html="course3.price">From <strong>₩35,000</strong></div>
-          <div class="course-rating">⭐ 5.0 (214)</div>
-        </div>
-      </div>
+      <div class="course-img bg-history">🏯<div class="course-img-overlay"></div><div class="course-badge" data-i18n="course3.badge">🏛 UNESCO</div><div class="course-duration" data-i18n="course3.dur">⏱ 2hrs</div></div>
+      <div class="course-body"><div class="course-location" data-i18n="course3.loc">📍 Suwon, Gyeonggi</div><div class="course-title" data-i18n="course3.title">Hwaseong Fortress Secret Walk</div><div class="course-desc" data-i18n="course3.desc">Explore the 18th-century UNESCO World Heritage fortress with a historian guide — secrets most tourists never hear.</div><div class="course-footer"><div class="course-price" data-i18n-html="course3.price">From <strong>₩35,000</strong></div><div class="course-rating">⭐ 5.0 (214)</div></div></div>
     </div>
-
     <div class="course-card reveal" data-cat="food">
-      <div class="course-img bg-food">
-        🍜
-        <div class="course-img-overlay"></div>
-        <div class="course-badge" data-i18n="course4.badge">👨‍🍳 Chef Led</div>
-        <div class="course-duration" data-i18n="course4.dur">⏱ 2.5hrs</div>
-      </div>
-      <div class="course-body">
-        <div class="course-location" data-i18n="course4.loc">📍 Gapyeong, Gyeonggi</div>
-        <div class="course-title" data-i18n="course4.title">Forest Makgeolli & Korean BBQ</div>
-        <div class="course-desc" data-i18n="course4.desc">Brew traditional rice wine in the mountains and grill local meats over charcoal with a local chef.</div>
-        <div class="course-footer">
-          <div class="course-price" data-i18n-html="course4.price">From <strong>₩65,000</strong></div>
-          <div class="course-rating">⭐ 4.9 (87)</div>
-        </div>
-      </div>
+      <div class="course-img bg-food">🍜<div class="course-img-overlay"></div><div class="course-badge" data-i18n="course4.badge">👨‍🍳 Chef Led</div><div class="course-duration" data-i18n="course4.dur">⏱ 2.5hrs</div></div>
+      <div class="course-body"><div class="course-location" data-i18n="course4.loc">📍 Gapyeong, Gyeonggi</div><div class="course-title" data-i18n="course4.title">Forest Makgeolli & Korean BBQ</div><div class="course-desc" data-i18n="course4.desc">Brew traditional rice wine in the mountains and grill local meats over charcoal with a local chef.</div><div class="course-footer"><div class="course-price" data-i18n-html="course4.price">From <strong>₩65,000</strong></div><div class="course-rating">⭐ 4.9 (87)</div></div></div>
     </div>
-
     <div class="course-card reveal reveal-delay-1" data-cat="craft">
-      <div class="course-img bg-art">
-        🎨
-        <div class="course-img-overlay"></div>
-        <div class="course-badge" data-i18n="course5.badge">✨ New</div>
-        <div class="course-duration" data-i18n="course5.dur">⏱ 4hrs</div>
-      </div>
-      <div class="course-body">
-        <div class="course-location" data-i18n="course5.loc">📍 Hanam, Gyeonggi</div>
-        <div class="course-title" data-i18n="course5.title">Hanji Paper Art with a Master</div>
-        <div class="course-desc" data-i18n="course5.desc">Create beautiful Korean traditional paper art (Hanji) with a certified master artisan. Take your art home.</div>
-        <div class="course-footer">
-          <div class="course-price" data-i18n-html="course5.price">From <strong>₩55,000</strong></div>
-          <div class="course-rating">⭐ 4.7 (43)</div>
-        </div>
-      </div>
+      <div class="course-img bg-art">🎨<div class="course-img-overlay"></div><div class="course-badge" data-i18n="course5.badge">✨ New</div><div class="course-duration" data-i18n="course5.dur">⏱ 4hrs</div></div>
+      <div class="course-body"><div class="course-location" data-i18n="course5.loc">📍 Hanam, Gyeonggi</div><div class="course-title" data-i18n="course5.title">Hanji Paper Art with a Master</div><div class="course-desc" data-i18n="course5.desc">Create beautiful Korean traditional paper art (Hanji) with a certified master artisan. Take your art home.</div><div class="course-footer"><div class="course-price" data-i18n-html="course5.price">From <strong>₩55,000</strong></div><div class="course-rating">⭐ 4.7 (43)</div></div></div>
     </div>
-
     <div class="course-card reveal reveal-delay-2" data-cat="nature">
-      <div class="course-img bg-nature">
-        🌿
-        <div class="course-img-overlay"></div>
-        <div class="course-badge" data-i18n="course6.badge">🌱 Eco</div>
-        <div class="course-duration" data-i18n="course6.dur">⏱ Half Day</div>
-      </div>
-      <div class="course-body">
-        <div class="course-location" data-i18n="course6.loc">📍 Namyangju, Gyeonggi</div>
-        <div class="course-title" data-i18n="course6.title">Bukhan River Kayak & Picnic</div>
-        <div class="course-desc" data-i18n="course6.desc">Paddle through stunning river scenery, stop at hidden riverside spots, and enjoy a traditional Korean picnic.</div>
-        <div class="course-footer">
-          <div class="course-price" data-i18n-html="course6.price">From <strong>₩75,000</strong></div>
-          <div class="course-rating">⭐ 4.8 (62)</div>
-        </div>
-      </div>
+      <div class="course-img bg-nature">🌿<div class="course-img-overlay"></div><div class="course-badge" data-i18n="course6.badge">🌱 Eco</div><div class="course-duration" data-i18n="course6.dur">⏱ Half Day</div></div>
+      <div class="course-body"><div class="course-location" data-i18n="course6.loc">📍 Namyangju, Gyeonggi</div><div class="course-title" data-i18n="course6.title">Bukhan River Kayak & Picnic</div><div class="course-desc" data-i18n="course6.desc">Paddle through stunning river scenery, stop at hidden riverside spots, and enjoy a traditional Korean picnic.</div><div class="course-footer"><div class="course-price" data-i18n-html="course6.price">From <strong>₩75,000</strong></div><div class="course-rating">⭐ 4.8 (62)</div></div></div>
     </div>
   </div>
 </section>
@@ -916,7 +596,6 @@ footer {
     <h2 class="section-title" data-i18n="hosts.title">Meet Your Guides</h2>
     <p class="section-sub" data-i18n="hosts.sub">Real people, real stories. NORI's verified local hosts open their world to curious travelers from around the globe.</p>
   </div>
-
   <div class="hosts-grid">
     <div class="host-card reveal">
       <div class="host-avatar" style="background:linear-gradient(135deg,#FFE0B2,#FFCC80);">🏺</div>
@@ -924,63 +603,46 @@ footer {
       <div class="host-role" data-i18n="host1.role">5th-Gen Pottery Master</div>
       <div class="host-location" data-i18n="host1.loc">📍 Icheon · Active since 2019</div>
       <div class="host-desc" data-i18n="host1.desc">"My family has shaped clay for 200 years. I want the world to touch our story."</div>
-      <div class="host-langs">
-        <span class="host-lang">🇺🇸 EN</span>
-        <span class="host-lang">🇨🇳 中</span>
-        <span class="host-lang">🇯🇵 JA</span>
-      </div>
+      <div class="host-langs"><span class="host-lang">🇺🇸 EN</span><span class="host-lang">🇨🇳 中</span><span class="host-lang">🇯🇵 JA</span></div>
       <div class="host-stats">
         <div class="host-stat"><div class="host-stat-num">214</div><div class="host-stat-lbl" data-i18n="hosts.guests">Guests</div></div>
         <div class="host-stat"><div class="host-stat-num">5.0</div><div class="host-stat-lbl" data-i18n="hosts.rating">Rating</div></div>
         <div class="host-stat"><div class="host-stat-num">98%</div><div class="host-stat-lbl" data-i18n="hosts.response">Response</div></div>
       </div>
     </div>
-
     <div class="host-card reveal reveal-delay-1">
       <div class="host-avatar" style="background:linear-gradient(135deg,#C8E6C9,#A5D6A7);">🌾</div>
       <div class="host-name" data-i18n="host2.name">Park Sunhee</div>
       <div class="host-role" data-i18n="host2.role">Organic Farmer & Chef</div>
       <div class="host-location" data-i18n="host2.loc">📍 Yangpyeong · Active since 2021</div>
       <div class="host-desc" data-i18n="host2.desc">"Every meal I cook carries the taste of Gyeonggi's seasons. Come taste it yourself."</div>
-      <div class="host-langs">
-        <span class="host-lang">🇺🇸 EN</span>
-        <span class="host-lang">🇫🇷 FR</span>
-      </div>
+      <div class="host-langs"><span class="host-lang">🇺🇸 EN</span><span class="host-lang">🇫🇷 FR</span></div>
       <div class="host-stats">
         <div class="host-stat"><div class="host-stat-num">156</div><div class="host-stat-lbl" data-i18n="hosts.guests">Guests</div></div>
         <div class="host-stat"><div class="host-stat-num">4.9</div><div class="host-stat-lbl" data-i18n="hosts.rating">Rating</div></div>
         <div class="host-stat"><div class="host-stat-num">100%</div><div class="host-stat-lbl" data-i18n="hosts.response">Response</div></div>
       </div>
     </div>
-
     <div class="host-card reveal reveal-delay-2">
       <div class="host-avatar" style="background:linear-gradient(135deg,#B3E5FC,#81D4FA);">🏯</div>
       <div class="host-name" data-i18n="host3.name">Prof. Lee Jiyoung</div>
       <div class="host-role" data-i18n="host3.role">Historian & Heritage Guide</div>
       <div class="host-location" data-i18n="host3.loc">📍 Suwon · Active since 2020</div>
       <div class="host-desc" data-i18n="host3.desc">"Hwaseong has secrets that textbooks never mention. Walk with me and discover them."</div>
-      <div class="host-langs">
-        <span class="host-lang">🇺🇸 EN</span>
-        <span class="host-lang">🇩🇪 DE</span>
-        <span class="host-lang">🇪🇸 ES</span>
-      </div>
+      <div class="host-langs"><span class="host-lang">🇺🇸 EN</span><span class="host-lang">🇩🇪 DE</span><span class="host-lang">🇪🇸 ES</span></div>
       <div class="host-stats">
         <div class="host-stat"><div class="host-stat-num">312</div><div class="host-stat-lbl" data-i18n="hosts.guests">Guests</div></div>
         <div class="host-stat"><div class="host-stat-num">5.0</div><div class="host-stat-lbl" data-i18n="hosts.rating">Rating</div></div>
         <div class="host-stat"><div class="host-stat-num">97%</div><div class="host-stat-lbl" data-i18n="hosts.response">Response</div></div>
       </div>
     </div>
-
     <div class="host-card reveal reveal-delay-3">
       <div class="host-avatar" style="background:linear-gradient(135deg,#FFCDD2,#EF9A9A);">🍜</div>
       <div class="host-name" data-i18n="host4.name">Chef Choi Minjun</div>
       <div class="host-role" data-i18n="host4.role">Traditional Food Artist</div>
       <div class="host-location" data-i18n="host4.loc">📍 Gapyeong · Active since 2022</div>
       <div class="host-desc" data-i18n="host4.desc">"Korean mountain cuisine is a lost art. My kitchen is the classroom."</div>
-      <div class="host-langs">
-        <span class="host-lang">🇺🇸 EN</span>
-        <span class="host-lang">🇯🇵 JA</span>
-      </div>
+      <div class="host-langs"><span class="host-lang">🇺🇸 EN</span><span class="host-lang">🇯🇵 JA</span></div>
       <div class="host-stats">
         <div class="host-stat"><div class="host-stat-num">89</div><div class="host-stat-lbl" data-i18n="hosts.guests">Guests</div></div>
         <div class="host-stat"><div class="host-stat-num">4.9</div><div class="host-stat-lbl" data-i18n="hosts.rating">Rating</div></div>
@@ -997,26 +659,21 @@ footer {
     <h2 class="section-title" data-i18n="multilang.title">We Speak Your Language</h2>
     <p class="section-sub" data-i18n="multilang.sub">NORI removes every language barrier between you and Gyeonggi's most authentic local experiences.</p>
   </div>
-
   <div class="lang-flags reveal">
-    <div class="lang-flag active">🇺🇸 English</div>
-    <div class="lang-flag">🇰🇷 한국어</div>
-    <div class="lang-flag">🇨🇳 中文</div>
-    <div class="lang-flag">🇯🇵 日本語</div>
-    <div class="lang-flag">🇫🇷 Français</div>
-    <div class="lang-flag">🇩🇪 Deutsch</div>
-    <div class="lang-flag">🇪🇸 Español</div>
-    <div class="lang-flag">🇮🇹 Italiano</div>
+    <div class="lang-flag active" onclick="setLangFromFlag('en',this)">🇺🇸 English</div>
+    <div class="lang-flag" onclick="setLangFromFlag('ko',this)">🇰🇷 한국어</div>
+    <div class="lang-flag" onclick="setLangFromFlag('zh',this)">🇨🇳 中文</div>
+    <div class="lang-flag" onclick="setLangFromFlag('ja',this)">🇯🇵 日本語</div>
+    <div class="lang-flag" onclick="setLangFromFlag('fr',this)">🇫🇷 Français</div>
+    <div class="lang-flag" onclick="setLangFromFlag('de',this)">🇩🇪 Deutsch</div>
+    <div class="lang-flag" onclick="setLangFromFlag('es',this)">🇪🇸 Español</div>
+    <div class="lang-flag" onclick="setLangFromFlag('it',this)">🇮🇹 Italiano</div>
   </div>
-
-  <div class="multilang-desc reveal" id="lang-desc" data-i18n="multilang.desc">
-    Start your Gyeonggi journey the moment you land. NORI's multilingual platform means no barriers, no confusion — just pure local discovery.
-  </div>
-
+  <div class="multilang-desc reveal" id="lang-desc" data-i18n="multilang.desc">Start your Gyeonggi journey the moment you land. NORI's multilingual platform means no barriers, no confusion — just pure local discovery.</div>
   <a href="#courses" class="btn-white reveal" data-i18n="multilang.btn">🌏 Explore in Your Language</a>
 </section>
 
-<!-- ABOUT / FOUNDER -->
+<!-- ABOUT -->
 <section id="about">
   <div class="about-visual reveal">
     <div class="about-card-main">
@@ -1024,59 +681,24 @@ footer {
       <div class="founder-name">Kent Kim 김형섭</div>
       <div class="founder-title" data-i18n="about.founderTitle">Founder & CEO, NORI</div>
       <div class="founder-creds">
-        <div class="cred-item">
-          <span class="cred-icon">📚</span>
-          <span class="cred-text" data-i18n="about.cred1">21 published books on economics & culture</span>
-        </div>
-        <div class="cred-item">
-          <span class="cred-icon">🎓</span>
-          <span class="cred-text" data-i18n="about.cred2">Harvard Economics Commencement Speaker</span>
-        </div>
-        <div class="cred-item">
-          <span class="cred-icon">🎨</span>
-          <span class="cred-text" data-i18n="about.cred3">25 years of art exhibition & curation</span>
-        </div>
-        <div class="cred-item">
-          <span class="cred-icon">🌏</span>
-          <span class="cred-text" data-i18n="about.cred4">Bridging local culture with global travelers</span>
-        </div>
+        <div class="cred-item"><span class="cred-icon">📚</span><span class="cred-text" data-i18n="about.cred1">21 published books on economics & culture</span></div>
+        <div class="cred-item"><span class="cred-icon">🎓</span><span class="cred-text" data-i18n="about.cred2">Harvard Economics Commencement Speaker</span></div>
+        <div class="cred-item"><span class="cred-icon">🎨</span><span class="cred-text" data-i18n="about.cred3">25 years of art exhibition & curation</span></div>
+        <div class="cred-item"><span class="cred-icon">🌏</span><span class="cred-text" data-i18n="about.cred4">Bridging local culture with global travelers</span></div>
       </div>
     </div>
-    <div class="about-float-card afc-1">
-      <strong>21</strong><span data-i18n="about.books">books published</span>
-    </div>
-    <div class="about-float-card afc-2">
-      <strong>25yrs</strong><span data-i18n="about.art">art experience</span>
-    </div>
+    <div class="about-float-card afc-1"><strong>21</strong><span data-i18n="about.books">books published</span></div>
+    <div class="about-float-card afc-2"><strong>25yrs</strong><span data-i18n="about.art">art experience</span></div>
   </div>
-
   <div class="about-right reveal reveal-delay-1">
     <div class="section-tag" data-i18n="about.tag">Our Vision</div>
     <h2 class="section-title" data-i18n="about.title">Why NORI?</h2>
-    <p class="section-sub" style="margin-bottom:2rem;" data-i18n="about.sub">
-      NORI (노리) means "play" in Korean — the joyful, curious spirit we believe travel should always carry. We built NORI because Gyeonggi's incredible local culture deserved a world-class platform to share it.
-    </p>
+    <p class="section-sub" style="margin-bottom:2rem;" data-i18n="about.sub">NORI (노리) means "play" in Korean — the joyful, curious spirit we believe travel should always carry. We built NORI because Gyeonggi's incredible local culture deserved a world-class platform to share it.</p>
     <div class="about-pillars">
-      <div class="pillar">
-        <div class="pillar-icon">🤝</div>
-        <div class="pillar-title" data-i18n="pillar1.title">Local First</div>
-        <div class="pillar-desc" data-i18n="pillar1.desc">Every experience is designed with and for Gyeonggi's local community.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">🌐</div>
-        <div class="pillar-title" data-i18n="pillar2.title">Truly Global</div>
-        <div class="pillar-desc" data-i18n="pillar2.desc">8 languages, zero barriers. The world is welcome in Gyeonggi.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">✅</div>
-        <div class="pillar-title" data-i18n="pillar3.title">Fully Verified</div>
-        <div class="pillar-desc" data-i18n="pillar3.desc">Every host, every experience is reviewed and certified by NORI.</div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">♻️</div>
-        <div class="pillar-title" data-i18n="pillar4.title">Sustainable</div>
-        <div class="pillar-desc" data-i18n="pillar4.desc">Supporting local economies while protecting Gyeonggi's natural beauty.</div>
-      </div>
+      <div class="pillar"><div class="pillar-icon">🤝</div><div class="pillar-title" data-i18n="pillar1.title">Local First</div><div class="pillar-desc" data-i18n="pillar1.desc">Every experience is designed with and for Gyeonggi's local community.</div></div>
+      <div class="pillar"><div class="pillar-icon">🌐</div><div class="pillar-title" data-i18n="pillar2.title">Truly Global</div><div class="pillar-desc" data-i18n="pillar2.desc">8 languages, zero barriers. The world is welcome in Gyeonggi.</div></div>
+      <div class="pillar"><div class="pillar-icon">✅</div><div class="pillar-title" data-i18n="pillar3.title">Fully Verified</div><div class="pillar-desc" data-i18n="pillar3.desc">Every host, every experience is reviewed and certified by NORI.</div></div>
+      <div class="pillar"><div class="pillar-icon">♻️</div><div class="pillar-title" data-i18n="pillar4.title">Sustainable</div><div class="pillar-desc" data-i18n="pillar4.desc">Supporting local economies while protecting Gyeonggi's natural beauty.</div></div>
     </div>
   </div>
 </section>
@@ -1123,288 +745,545 @@ footer {
   </div>
 </footer>
 
-<script>
-// ── SCROLL REVEAL ──
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-}, { threshold: 0.12 });
-reveals.forEach(r => observer.observe(r));
+<!-- ══════════════════════════════════
+     AI CHATBOT WIDGET
+══════════════════════════════════ -->
+<button id="chat-btn" onclick="toggleChat()">
+  🗺
+  <div class="chat-badge">AI</div>
+</button>
 
-// ── FULL i18n ENGINE ──
+<div id="chat-window">
+  <div class="chat-header">
+    <div class="chat-header-avatar">🗺</div>
+    <div class="chat-header-info">
+      <div class="chat-header-name">NORI Travel AI</div>
+      <div class="chat-header-status">Online — Gyeonggi Expert</div>
+    </div>
+    <button class="chat-close" onclick="toggleChat()">✕</button>
+  </div>
+
+  <div class="chat-lang-bar">
+    <span>Chat in:</span>
+    <button class="chat-lang-pill active" onclick="setChatLang('en',this)">EN</button>
+    <button class="chat-lang-pill" onclick="setChatLang('ko',this)">한국어</button>
+    <button class="chat-lang-pill" onclick="setChatLang('ja',this)">日本語</button>
+    <button class="chat-lang-pill" onclick="setChatLang('zh',this)">中文</button>
+    <button class="chat-lang-pill" onclick="setChatLang('fr',this)">FR</button>
+    <button class="chat-lang-pill" onclick="setChatLang('de',this)">DE</button>
+  </div>
+
+  <div class="chat-messages" id="chat-messages">
+    <div class="msg bot">
+      <div class="msg-avatar">🗺</div>
+      <div class="msg-bubble">Hi! I'm NORI's AI travel guide 👋<br><br>Tell me what kind of experience you're looking for and I'll recommend the perfect Gyeonggi adventure for you!</div>
+    </div>
+  </div>
+
+  <div class="chat-quick-btns" id="quick-btns">
+    <button class="quick-btn" onclick="sendQuick(this)">🏺 Pottery & Crafts</button>
+    <button class="quick-btn" onclick="sendQuick(this)">🌿 Nature & Farm</button>
+    <button class="quick-btn" onclick="sendQuick(this)">🏯 History</button>
+    <button class="quick-btn" onclick="sendQuick(this)">🍜 Food Tour</button>
+    <button class="quick-btn" onclick="sendQuick(this)">⏱ Near Airport</button>
+  </div>
+
+  <div class="chat-input-row">
+    <input class="chat-input" id="chat-input" type="text" placeholder="Ask me anything about Gyeonggi..." onkeydown="if(event.key==='Enter')sendMsg()">
+    <button class="chat-send" id="chat-send-btn" onclick="sendMsg()">➤</button>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════
+// i18n DATA
+// ══════════════════════════════════
 const i18n = {
   en: {
-    "nav.platform": "Platform", "nav.explore": "Explore", "nav.hosts": "Hosts", "nav.about": "About", "nav.cta": "Start Exploring",
-    "hero.badge": "Incheon Airport → Gyeonggi in minutes",
-    "hero.title": "Discover<br><span class='accent'>Korea's</span><br><span class='accent2'>Hidden Heart</span>",
-    "hero.desc": "NORI connects foreign travelers directly to Gyeonggi's local treasures — from ancient pottery villages to living farm experiences — all in your language.",
-    "hero.btn1": "🗺 Explore Courses", "hero.btn2": "Meet Local Hosts",
-    "hero.stat1": "Cities & Counties", "hero.stat2": "Languages Supported", "hero.stat3": "Local Hosts",
-    "phone.tag1": "Icheon Pottery", "phone.tag2": "Farm Stay", "phone.tag3": "4.9 Rating",
-    "phone.topTitle": "Near Incheon Airport", "phone.topLoc": "Gyeonggi Experiences",
-    "phone.card1.title": "Icheon Pottery Workshop", "phone.card1.sub": "⭐ 4.9 · 45min from airport", "phone.card1.tag": "NEW",
-    "phone.card2.title": "Yangpyeong Farm Stay", "phone.card2.sub": "⭐ 4.8 · Nature retreat", "phone.card2.tag": "HOT",
-    "phone.card3.title": "Hwaseong Fortress Walk", "phone.card3.sub": "⭐ 5.0 · UNESCO Heritage", "phone.card3.tag": "TOP",
-    "layers.tag": "How NORI Works", "layers.title": "The 3-Layer Experience",
-    "layers.sub": "From the moment you land at Incheon to the memories you take home — NORI guides every step.",
-    "layers.l1.num": "01 — DISCOVER", "layers.l1.title": "At the Airport", "layers.l1.sub": "Incheon Airport → Gyeonggi",
-    "layers.l1.desc": "Scan a QR code the moment you land. NORI instantly shows you what's happening in Gyeonggi — curated by distance, interest, and your travel style.",
-    "layers.l1.f1": "QR / NFC instant onboarding", "layers.l1.f2": "8-language real-time support", "layers.l1.f3": "Location-aware recommendations", "layers.l1.f4": "Transport & direction integration",
-    "layers.l2.num": "02 — EXPLORE", "layers.l2.title": "Curated Journeys", "layers.l2.sub": "Local stories, your pace",
-    "layers.l2.desc": "Choose from 10+ hand-crafted themed routes — pottery, farming, history, street food, and more. Book directly or through trusted local partners.",
-    "layers.l2.f1": "10+ curated local themes", "layers.l2.f2": "Direct & consignment booking", "layers.l2.f3": "Verified travel products", "layers.l2.f4": "Live local event info",
-    "layers.l3.num": "03 — CONNECT", "layers.l3.title": "Meet Real Locals", "layers.l3.sub": "Hosts who know their home",
-    "layers.l3.desc": "Gyeonggi's artisans, farmers, chefs, and artists open their doors exclusively for NORI travelers. Real connections, real memories.",
-    "layers.l3.f1": "50+ verified local hosts", "layers.l3.f2": "Real-time booking & payment", "layers.l3.f3": "Multilingual host support", "layers.l3.f4": "Reviewed & trusted community",
-    "courses.tag": "Local Experiences", "courses.title": "Explore Gyeonggi",
-    "filter.all": "All", "filter.craft": "🏺 Craft", "filter.nature": "🌿 Nature", "filter.history": "🏯 History", "filter.food": "🍜 Food",
-    "course1.badge": "⭐ Top Pick", "course1.dur": "⏱ 3hrs", "course1.loc": "📍 Icheon, Gyeonggi",
-    "course1.title": "Traditional Celadon Pottery Workshop", "course1.desc": "Shape your own masterpiece with a 5th-generation master potter in Icheon, Korea's pottery capital.", "course1.price": "From <strong>₩45,000</strong>",
-    "course2.badge": "🔥 Hot", "course2.dur": "⏱ Full Day", "course2.loc": "📍 Yangpyeong, Gyeonggi",
-    "course2.title": "Organic Farm Stay & Rice Harvest", "course2.desc": "Wake up to mountain views, harvest organic rice, and enjoy a farm-to-table lunch with a local family.", "course2.price": "From <strong>₩85,000</strong>",
-    "course3.badge": "🏛 UNESCO", "course3.dur": "⏱ 2hrs", "course3.loc": "📍 Suwon, Gyeonggi",
-    "course3.title": "Hwaseong Fortress Secret Walk", "course3.desc": "Explore the 18th-century UNESCO World Heritage fortress with a historian guide — secrets most tourists never hear.", "course3.price": "From <strong>₩35,000</strong>",
-    "course4.badge": "👨‍🍳 Chef Led", "course4.dur": "⏱ 2.5hrs", "course4.loc": "📍 Gapyeong, Gyeonggi",
-    "course4.title": "Forest Makgeolli & Korean BBQ", "course4.desc": "Brew traditional rice wine in the mountains and grill local meats over charcoal with a local chef.", "course4.price": "From <strong>₩65,000</strong>",
-    "course5.badge": "✨ New", "course5.dur": "⏱ 4hrs", "course5.loc": "📍 Hanam, Gyeonggi",
-    "course5.title": "Hanji Paper Art with a Master", "course5.desc": "Create beautiful Korean traditional paper art (Hanji) with a certified master artisan. Take your art home.", "course5.price": "From <strong>₩55,000</strong>",
-    "course6.badge": "🌱 Eco", "course6.dur": "⏱ Half Day", "course6.loc": "📍 Namyangju, Gyeonggi",
-    "course6.title": "Bukhan River Kayak & Picnic", "course6.desc": "Paddle through stunning river scenery, stop at hidden riverside spots, and enjoy a traditional Korean picnic.", "course6.price": "From <strong>₩75,000</strong>",
-    "hosts.tag": "Local Hosts", "hosts.title": "Meet Your Guides", "hosts.sub": "Real people, real stories. NORI's verified local hosts open their world to curious travelers from around the globe.",
-    "hosts.guests": "Guests", "hosts.rating": "Rating", "hosts.response": "Response",
-    "host1.name": "Master Kim Dohyun", "host1.role": "5th-Gen Pottery Master", "host1.loc": "📍 Icheon · Active since 2019", "host1.desc": "\"My family has shaped clay for 200 years. I want the world to touch our story.\"",
-    "host2.name": "Park Sunhee", "host2.role": "Organic Farmer & Chef", "host2.loc": "📍 Yangpyeong · Active since 2021", "host2.desc": "\"Every meal I cook carries the taste of Gyeonggi's seasons. Come taste it yourself.\"",
-    "host3.name": "Prof. Lee Jiyoung", "host3.role": "Historian & Heritage Guide", "host3.loc": "📍 Suwon · Active since 2020", "host3.desc": "\"Hwaseong has secrets that textbooks never mention. Walk with me and discover them.\"",
-    "host4.name": "Chef Choi Minjun", "host4.role": "Traditional Food Artist", "host4.loc": "📍 Gapyeong · Active since 2022", "host4.desc": "\"Korean mountain cuisine is a lost art. My kitchen is the classroom.\"",
-    "multilang.tag": "Available in 8 Languages", "multilang.title": "We Speak Your Language",
-    "multilang.sub": "NORI removes every language barrier between you and Gyeonggi's most authentic local experiences.",
-    "multilang.desc": "Start your Gyeonggi journey the moment you land. NORI's multilingual platform means no barriers, no confusion — just pure local discovery.",
-    "multilang.btn": "🌏 Explore in Your Language",
-    "about.founderTitle": "Founder & CEO, NORI", "about.cred1": "21 published books on economics & culture", "about.cred2": "Harvard Economics Commencement Speaker", "about.cred3": "25 years of art exhibition & curation", "about.cred4": "Bridging local culture with global travelers",
-    "about.books": "books published", "about.art": "art experience",
-    "about.tag": "Our Vision", "about.title": "Why NORI?",
-    "about.sub": "NORI (노리) means \"play\" in Korean — the joyful, curious spirit we believe travel should always carry. We built NORI because Gyeonggi's incredible local culture deserved a world-class platform to share it.",
-    "pillar1.title": "Local First", "pillar1.desc": "Every experience is designed with and for Gyeonggi's local community.",
-    "pillar2.title": "Truly Global", "pillar2.desc": "8 languages, zero barriers. The world is welcome in Gyeonggi.",
-    "pillar3.title": "Fully Verified", "pillar3.desc": "Every host, every experience is reviewed and certified by NORI.",
-    "pillar4.title": "Sustainable", "pillar4.desc": "Supporting local economies while protecting Gyeonggi's natural beauty.",
-    "footer.brand": "Gyeonggi's local treasures, made accessible to travelers from every corner of the world. Supported by Gyeonggi Tourism Organization.",
-    "footer.col1.title": "Explore", "footer.col1.l1": "All Courses", "footer.col1.l2": "Craft & Art", "footer.col1.l3": "Nature & Farm", "footer.col1.l4": "History & Culture", "footer.col1.l5": "Food & Drink",
-    "footer.col2.title": "For Hosts", "footer.col2.l1": "Become a Host", "footer.col2.l2": "Host Guidelines", "footer.col2.l3": "Host Community", "footer.col2.l4": "Earnings",
-    "footer.col3.title": "Company", "footer.col3.l1": "About NORI", "footer.col3.l2": "Press", "footer.col3.l3": "Careers", "footer.col3.l4": "Contact",
-    "footer.copy": "© 2026 NORI. All rights reserved. | Supported by Gyeonggi Tourism Organization"
+    "nav.platform":"Platform","nav.explore":"Explore","nav.hosts":"Hosts","nav.about":"About","nav.cta":"Start Exploring",
+    "hero.badge":"Incheon Airport → Gyeonggi in minutes",
+    "hero.title":"Discover<br><span class='accent'>Korea's</span><br><span class='accent2'>Hidden Heart</span>",
+    "hero.desc":"NORI connects foreign travelers directly to Gyeonggi's local treasures — from ancient pottery villages to living farm experiences — all in your language.",
+    "hero.btn1":"🗺 Explore Courses","hero.btn2":"Meet Local Hosts",
+    "hero.stat1":"Cities & Counties","hero.stat2":"Languages Supported","hero.stat3":"Local Hosts",
+    "phone.tag1":"Icheon Pottery","phone.tag2":"Farm Stay","phone.tag3":"4.9 Rating",
+    "phone.topTitle":"Near Incheon Airport","phone.topLoc":"Gyeonggi Experiences",
+    "phone.card1.title":"Icheon Pottery Workshop","phone.card1.sub":"⭐ 4.9 · 45min from airport","phone.card1.tag":"NEW",
+    "phone.card2.title":"Yangpyeong Farm Stay","phone.card2.sub":"⭐ 4.8 · Nature retreat","phone.card2.tag":"HOT",
+    "phone.card3.title":"Hwaseong Fortress Walk","phone.card3.sub":"⭐ 5.0 · UNESCO Heritage","phone.card3.tag":"TOP",
+    "layers.tag":"How NORI Works","layers.title":"The 3-Layer Experience",
+    "layers.sub":"From the moment you land at Incheon to the memories you take home — NORI guides every step.",
+    "layers.l1.num":"01 — DISCOVER","layers.l1.title":"At the Airport","layers.l1.sub":"Incheon Airport → Gyeonggi",
+    "layers.l1.desc":"Scan a QR code the moment you land. NORI instantly shows you what's happening in Gyeonggi — curated by distance, interest, and your travel style.",
+    "layers.l1.f1":"QR / NFC instant onboarding","layers.l1.f2":"8-language real-time support","layers.l1.f3":"Location-aware recommendations","layers.l1.f4":"Transport & direction integration",
+    "layers.l2.num":"02 — EXPLORE","layers.l2.title":"Curated Journeys","layers.l2.sub":"Local stories, your pace",
+    "layers.l2.desc":"Choose from 10+ hand-crafted themed routes — pottery, farming, history, street food, and more. Book directly or through trusted local partners.",
+    "layers.l2.f1":"10+ curated local themes","layers.l2.f2":"Direct & consignment booking","layers.l2.f3":"Verified travel products","layers.l2.f4":"Live local event info",
+    "layers.l3.num":"03 — CONNECT","layers.l3.title":"Meet Real Locals","layers.l3.sub":"Hosts who know their home",
+    "layers.l3.desc":"Gyeonggi's artisans, farmers, chefs, and artists open their doors exclusively for NORI travelers. Real connections, real memories.",
+    "layers.l3.f1":"50+ verified local hosts","layers.l3.f2":"Real-time booking & payment","layers.l3.f3":"Multilingual host support","layers.l3.f4":"Reviewed & trusted community",
+    "courses.tag":"Local Experiences","courses.title":"Explore Gyeonggi",
+    "filter.all":"All","filter.craft":"🏺 Craft","filter.nature":"🌿 Nature","filter.history":"🏯 History","filter.food":"🍜 Food",
+    "course1.badge":"⭐ Top Pick","course1.dur":"⏱ 3hrs","course1.loc":"📍 Icheon, Gyeonggi","course1.title":"Traditional Celadon Pottery Workshop","course1.desc":"Shape your own masterpiece with a 5th-generation master potter in Icheon, Korea's pottery capital.","course1.price":"From <strong>₩45,000</strong>",
+    "course2.badge":"🔥 Hot","course2.dur":"⏱ Full Day","course2.loc":"📍 Yangpyeong, Gyeonggi","course2.title":"Organic Farm Stay & Rice Harvest","course2.desc":"Wake up to mountain views, harvest organic rice, and enjoy a farm-to-table lunch with a local family.","course2.price":"From <strong>₩85,000</strong>",
+    "course3.badge":"🏛 UNESCO","course3.dur":"⏱ 2hrs","course3.loc":"📍 Suwon, Gyeonggi","course3.title":"Hwaseong Fortress Secret Walk","course3.desc":"Explore the 18th-century UNESCO World Heritage fortress with a historian guide — secrets most tourists never hear.","course3.price":"From <strong>₩35,000</strong>",
+    "course4.badge":"👨‍🍳 Chef Led","course4.dur":"⏱ 2.5hrs","course4.loc":"📍 Gapyeong, Gyeonggi","course4.title":"Forest Makgeolli & Korean BBQ","course4.desc":"Brew traditional rice wine in the mountains and grill local meats over charcoal with a local chef.","course4.price":"From <strong>₩65,000</strong>",
+    "course5.badge":"✨ New","course5.dur":"⏱ 4hrs","course5.loc":"📍 Hanam, Gyeonggi","course5.title":"Hanji Paper Art with a Master","course5.desc":"Create beautiful Korean traditional paper art (Hanji) with a certified master artisan. Take your art home.","course5.price":"From <strong>₩55,000</strong>",
+    "course6.badge":"🌱 Eco","course6.dur":"⏱ Half Day","course6.loc":"📍 Namyangju, Gyeonggi","course6.title":"Bukhan River Kayak & Picnic","course6.desc":"Paddle through stunning river scenery, stop at hidden riverside spots, and enjoy a traditional Korean picnic.","course6.price":"From <strong>₩75,000</strong>",
+    "hosts.tag":"Local Hosts","hosts.title":"Meet Your Guides","hosts.sub":"Real people, real stories. NORI's verified local hosts open their world to curious travelers from around the globe.",
+    "hosts.guests":"Guests","hosts.rating":"Rating","hosts.response":"Response",
+    "host1.name":"Master Kim Dohyun","host1.role":"5th-Gen Pottery Master","host1.loc":"📍 Icheon · Active since 2019","host1.desc":"\"My family has shaped clay for 200 years. I want the world to touch our story.\"",
+    "host2.name":"Park Sunhee","host2.role":"Organic Farmer & Chef","host2.loc":"📍 Yangpyeong · Active since 2021","host2.desc":"\"Every meal I cook carries the taste of Gyeonggi's seasons. Come taste it yourself.\"",
+    "host3.name":"Prof. Lee Jiyoung","host3.role":"Historian & Heritage Guide","host3.loc":"📍 Suwon · Active since 2020","host3.desc":"\"Hwaseong has secrets that textbooks never mention. Walk with me and discover them.\"",
+    "host4.name":"Chef Choi Minjun","host4.role":"Traditional Food Artist","host4.loc":"📍 Gapyeong · Active since 2022","host4.desc":"\"Korean mountain cuisine is a lost art. My kitchen is the classroom.\"",
+    "multilang.tag":"Available in 8 Languages","multilang.title":"We Speak Your Language",
+    "multilang.sub":"NORI removes every language barrier between you and Gyeonggi's most authentic local experiences.",
+    "multilang.desc":"Start your Gyeonggi journey the moment you land. NORI's multilingual platform means no barriers, no confusion — just pure local discovery.",
+    "multilang.btn":"🌏 Explore in Your Language",
+    "about.founderTitle":"Founder & CEO, NORI","about.cred1":"21 published books on economics & culture","about.cred2":"Harvard Economics Commencement Speaker","about.cred3":"25 years of art exhibition & curation","about.cred4":"Bridging local culture with global travelers",
+    "about.books":"books published","about.art":"art experience",
+    "about.tag":"Our Vision","about.title":"Why NORI?",
+    "about.sub":"NORI (노리) means \"play\" in Korean — the joyful, curious spirit we believe travel should always carry. We built NORI because Gyeonggi's incredible local culture deserved a world-class platform to share it.",
+    "pillar1.title":"Local First","pillar1.desc":"Every experience is designed with and for Gyeonggi's local community.",
+    "pillar2.title":"Truly Global","pillar2.desc":"8 languages, zero barriers. The world is welcome in Gyeonggi.",
+    "pillar3.title":"Fully Verified","pillar3.desc":"Every host, every experience is reviewed and certified by NORI.",
+    "pillar4.title":"Sustainable","pillar4.desc":"Supporting local economies while protecting Gyeonggi's natural beauty.",
+    "footer.brand":"Gyeonggi's local treasures, made accessible to travelers from every corner of the world. Supported by Gyeonggi Tourism Organization.",
+    "footer.col1.title":"Explore","footer.col1.l1":"All Courses","footer.col1.l2":"Craft & Art","footer.col1.l3":"Nature & Farm","footer.col1.l4":"History & Culture","footer.col1.l5":"Food & Drink",
+    "footer.col2.title":"For Hosts","footer.col2.l1":"Become a Host","footer.col2.l2":"Host Guidelines","footer.col2.l3":"Host Community","footer.col2.l4":"Earnings",
+    "footer.col3.title":"Company","footer.col3.l1":"About NORI","footer.col3.l2":"Press","footer.col3.l3":"Careers","footer.col3.l4":"Contact",
+    "footer.copy":"© 2026 NORI. All rights reserved. | Supported by Gyeonggi Tourism Organization"
   },
   ko: {
-    "nav.platform": "플랫폼", "nav.explore": "탐험하기", "nav.hosts": "호스트", "nav.about": "소개", "nav.cta": "지금 탐험하기",
-    "hero.badge": "인천공항 → 경기도 바로 연결",
-    "hero.title": "경기도의<br><span class='accent'>숨겨진</span><br><span class='accent2'>보석</span>을 발견하세요",
-    "hero.desc": "NORI는 외국인 여행자를 경기도의 로컬 보물과 직접 연결합니다 — 도자기 마을부터 농촌 체험까지, 모두 당신의 언어로.",
-    "hero.btn1": "🗺 코스 탐험하기", "hero.btn2": "로컬 호스트 만나기",
-    "hero.stat1": "시·군", "hero.stat2": "지원 언어", "hero.stat3": "로컬 호스트",
-    "phone.tag1": "이천 도자기", "phone.tag2": "농촌 체험", "phone.tag3": "4.9 평점",
-    "phone.topTitle": "인천공항 근처", "phone.topLoc": "경기도 체험",
-    "phone.card1.title": "이천 도자기 워크숍", "phone.card1.sub": "⭐ 4.9 · 공항에서 45분", "phone.card1.tag": "신규",
-    "phone.card2.title": "양평 팜스테이", "phone.card2.sub": "⭐ 4.8 · 자연 속 힐링", "phone.card2.tag": "인기",
-    "phone.card3.title": "화성행궁 비밀 투어", "phone.card3.sub": "⭐ 5.0 · 유네스코 유산", "phone.card3.tag": "TOP",
-    "layers.tag": "NORI 소개", "layers.title": "3단계 여행 경험",
-    "layers.sub": "인천공항 도착 순간부터 집으로 돌아가는 순간까지 — NORI가 모든 단계를 안내합니다.",
-    "layers.l1.num": "01 — 발견", "layers.l1.title": "공항에서 시작", "layers.l1.sub": "인천공항 → 경기도",
-    "layers.l1.desc": "도착과 동시에 QR코드를 스캔하세요. NORI가 거리·관심사·여행 스타일에 맞춰 경기도 여행지를 즉시 추천해 드립니다.",
-    "layers.l1.f1": "QR / NFC 즉시 온보딩", "layers.l1.f2": "8개국어 실시간 지원", "layers.l1.f3": "위치 기반 맞춤 추천", "layers.l1.f4": "교통·길 안내 통합",
-    "layers.l2.num": "02 — 탐험", "layers.l2.title": "큐레이션 여행", "layers.l2.sub": "로컬 이야기, 나만의 속도로",
-    "layers.l2.desc": "도자기·농촌·역사·길거리 음식 등 10개 이상의 테마 코스 중 선택하세요. 직접 예약 또는 신뢰할 수 있는 파트너를 통해 예약할 수 있습니다.",
-    "layers.l2.f1": "10개+ 로컬 테마 코스", "layers.l2.f2": "직판·위탁 예약", "layers.l2.f3": "검증된 여행 상품", "layers.l2.f4": "현지 이벤트 실시간 정보",
-    "layers.l3.num": "03 — 연결", "layers.l3.title": "진짜 현지인 만나기", "layers.l3.sub": "고향을 아는 호스트들",
-    "layers.l3.desc": "경기도의 장인·농부·요리사·예술가들이 NORI 여행자를 위해 문을 엽니다. 진짜 연결, 진짜 추억.",
-    "layers.l3.f1": "50개+ 검증된 로컬 호스트", "layers.l3.f2": "실시간 예약·결제", "layers.l3.f3": "다국어 호스트 지원", "layers.l3.f4": "리뷰 기반 신뢰 커뮤니티",
-    "courses.tag": "현지 체험", "courses.title": "경기도 탐험",
-    "filter.all": "전체", "filter.craft": "🏺 공예", "filter.nature": "🌿 자연", "filter.history": "🏯 역사", "filter.food": "🍜 음식",
-    "course1.badge": "⭐ 인기 선택", "course1.dur": "⏱ 3시간", "course1.loc": "📍 이천, 경기도",
-    "course1.title": "전통 청자 도자기 워크숍", "course1.desc": "한국 도자기의 수도 이천에서 5대째 내려오는 도예 장인과 함께 나만의 작품을 만들어 보세요.", "course1.price": "<strong>₩45,000</strong>부터",
-    "course2.badge": "🔥 인기", "course2.dur": "⏱ 하루 종일", "course2.loc": "📍 양평, 경기도",
-    "course2.title": "유기농 팜스테이 & 벼 수확", "course2.desc": "산 전망에서 눈을 뜨고, 유기농 쌀을 수확하고, 현지 가족과 함께하는 팜투테이블 점심을 즐기세요.", "course2.price": "<strong>₩85,000</strong>부터",
-    "course3.badge": "🏛 유네스코", "course3.dur": "⏱ 2시간", "course3.loc": "📍 수원, 경기도",
-    "course3.title": "화성행궁 비밀 투어", "course3.desc": "역사학자 가이드와 함께 18세기 유네스코 세계문화유산 화성의 비밀을 탐험하세요 — 대부분의 관광객이 모르는 이야기.", "course3.price": "<strong>₩35,000</strong>부터",
-    "course4.badge": "👨‍🍳 셰프 동행", "course4.dur": "⏱ 2.5시간", "course4.loc": "📍 가평, 경기도",
-    "course4.title": "숲속 막걸리 & 한국식 BBQ", "course4.desc": "산속에서 전통 쌀 막걸리를 빚고 현지 셰프와 함께 숯불에 고기를 구워보세요.", "course4.price": "<strong>₩65,000</strong>부터",
-    "course5.badge": "✨ 신규", "course5.dur": "⏱ 4시간", "course5.loc": "📍 하남, 경기도",
-    "course5.title": "장인과 함께하는 한지 공예", "course5.desc": "인증된 한지 장인과 함께 아름다운 전통 한지 공예품을 만들고 집으로 가져가세요.", "course5.price": "<strong>₩55,000</strong>부터",
-    "course6.badge": "🌱 에코", "course6.dur": "⏱ 반나절", "course6.loc": "📍 남양주, 경기도",
-    "course6.title": "북한강 카약 & 피크닉", "course6.desc": "아름다운 강 풍경 속에서 카약을 타고, 숨겨진 강가 명소에 들러 전통 한국식 피크닉을 즐기세요.", "course6.price": "<strong>₩75,000</strong>부터",
-    "hosts.tag": "로컬 호스트", "hosts.title": "가이드를 만나보세요", "hosts.sub": "진짜 사람들, 진짜 이야기. NORI의 검증된 로컬 호스트들이 전 세계 여행자에게 그들의 세계를 열어드립니다.",
-    "hosts.guests": "게스트", "hosts.rating": "평점", "hosts.response": "응답률",
-    "host1.name": "도예 장인 김도현", "host1.role": "5대째 도예 장인", "host1.loc": "📍 이천 · 2019년부터 활동", "host1.desc": "\"200년간 이어온 흙과의 인연. 세상이 우리 이야기를 만져보길 원합니다.\"",
-    "host2.name": "박선희", "host2.role": "유기농 농부 & 요리사", "host2.loc": "📍 양평 · 2021년부터 활동", "host2.desc": "\"제가 만드는 모든 음식에는 경기도의 계절 맛이 담겨 있어요. 직접 맛보러 오세요.\"",
-    "host3.name": "이지영 교수", "host3.role": "역사학자 & 문화재 가이드", "host3.loc": "📍 수원 · 2020년부터 활동", "host3.desc": "\"화성에는 교과서에 없는 비밀이 있어요. 저와 함께 걸으며 발견해 보세요.\"",
-    "host4.name": "최민준 셰프", "host4.role": "전통 음식 예술가", "host4.loc": "📍 가평 · 2022년부터 활동", "host4.desc": "\"한국 산악 요리는 잊혀가는 예술입니다. 제 주방이 교실이에요.\"",
-    "multilang.tag": "8개 언어 지원", "multilang.title": "당신의 언어로 말합니다",
-    "multilang.sub": "NORI는 여러분과 경기도의 가장 진정한 현지 체험 사이의 모든 언어 장벽을 없앱니다.",
-    "multilang.desc": "인천공항에 도착하는 순간부터 경기도 여행을 시작하세요. NORI의 다국어 플랫폼이 모든 언어 장벽을 해소합니다.",
-    "multilang.btn": "🌏 내 언어로 탐험하기",
-    "about.founderTitle": "창업자 & CEO, NORI", "about.cred1": "경제학·문화예술 분야 저서 21권", "about.cred2": "하버드 경제학 졸업 강연자", "about.cred3": "25년간 미술 전시 기획·큐레이션", "about.cred4": "지역 문화와 글로벌 여행자를 잇는 가교",
-    "about.books": "권 출간", "about.art": "년 미술 경력",
-    "about.tag": "우리의 비전", "about.title": "왜 NORI인가?",
-    "about.sub": "NORI(노리)는 한국어로 '놀이'를 뜻합니다 — 여행이 언제나 간직해야 할 즐겁고 호기심 넘치는 정신. 경기도의 놀라운 로컬 문화를 공유할 수 있는 세계적 수준의 플랫폼이 필요했기에 NORI를 만들었습니다.",
-    "pillar1.title": "로컬 우선", "pillar1.desc": "모든 체험은 경기도 지역 커뮤니티와 함께, 그리고 그들을 위해 설계됩니다.",
-    "pillar2.title": "진정한 글로벌", "pillar2.desc": "8개 언어, 장벽 없음. 세계가 경기도를 환영합니다.",
-    "pillar3.title": "완전 검증", "pillar3.desc": "모든 호스트와 모든 체험은 NORI에 의해 리뷰되고 인증됩니다.",
-    "pillar4.title": "지속가능성", "pillar4.desc": "경기도의 자연을 보호하면서 지역 경제를 지원합니다.",
-    "footer.brand": "경기도의 로컬 보물을 전 세계 여행자에게 전합니다. 경기관광공사 지원.",
-    "footer.col1.title": "탐험", "footer.col1.l1": "전체 코스", "footer.col1.l2": "공예 & 예술", "footer.col1.l3": "자연 & 농촌", "footer.col1.l4": "역사 & 문화", "footer.col1.l5": "음식 & 음료",
-    "footer.col2.title": "호스트", "footer.col2.l1": "호스트 되기", "footer.col2.l2": "호스트 가이드", "footer.col2.l3": "호스트 커뮤니티", "footer.col2.l4": "수익",
-    "footer.col3.title": "회사", "footer.col3.l1": "NORI 소개", "footer.col3.l2": "보도자료", "footer.col3.l3": "채용", "footer.col3.l4": "문의",
-    "footer.copy": "© 2026 NORI. All rights reserved. | 경기관광공사 지원"
+    "nav.platform":"플랫폼","nav.explore":"탐험하기","nav.hosts":"호스트","nav.about":"소개","nav.cta":"지금 탐험하기",
+    "hero.badge":"인천공항 → 경기도 바로 연결",
+    "hero.title":"경기도의<br><span class='accent'>숨겨진</span><br><span class='accent2'>보석</span>을 발견하세요",
+    "hero.desc":"NORI는 외국인 여행자를 경기도의 로컬 보물과 직접 연결합니다 — 도자기 마을부터 농촌 체험까지, 모두 당신의 언어로.",
+    "hero.btn1":"🗺 코스 탐험하기","hero.btn2":"로컬 호스트 만나기",
+    "hero.stat1":"시·군","hero.stat2":"지원 언어","hero.stat3":"로컬 호스트",
+    "phone.tag1":"이천 도자기","phone.tag2":"농촌 체험","phone.tag3":"4.9 평점",
+    "phone.topTitle":"인천공항 근처","phone.topLoc":"경기도 체험",
+    "phone.card1.title":"이천 도자기 워크숍","phone.card1.sub":"⭐ 4.9 · 공항에서 45분","phone.card1.tag":"신규",
+    "phone.card2.title":"양평 팜스테이","phone.card2.sub":"⭐ 4.8 · 자연 속 힐링","phone.card2.tag":"인기",
+    "phone.card3.title":"화성행궁 비밀 투어","phone.card3.sub":"⭐ 5.0 · 유네스코 유산","phone.card3.tag":"TOP",
+    "layers.tag":"NORI 소개","layers.title":"3단계 여행 경험",
+    "layers.sub":"인천공항 도착 순간부터 집으로 돌아가는 순간까지 — NORI가 모든 단계를 안내합니다.",
+    "layers.l1.num":"01 — 발견","layers.l1.title":"공항에서 시작","layers.l1.sub":"인천공항 → 경기도",
+    "layers.l1.desc":"도착과 동시에 QR코드를 스캔하세요. NORI가 거리·관심사·여행 스타일에 맞춰 경기도 여행지를 즉시 추천해 드립니다.",
+    "layers.l1.f1":"QR / NFC 즉시 온보딩","layers.l1.f2":"8개국어 실시간 지원","layers.l1.f3":"위치 기반 맞춤 추천","layers.l1.f4":"교통·길 안내 통합",
+    "layers.l2.num":"02 — 탐험","layers.l2.title":"큐레이션 여행","layers.l2.sub":"로컬 이야기, 나만의 속도로",
+    "layers.l2.desc":"도자기·농촌·역사·길거리 음식 등 10개 이상의 테마 코스 중 선택하세요.",
+    "layers.l2.f1":"10개+ 로컬 테마 코스","layers.l2.f2":"직판·위탁 예약","layers.l2.f3":"검증된 여행 상품","layers.l2.f4":"현지 이벤트 실시간 정보",
+    "layers.l3.num":"03 — 연결","layers.l3.title":"진짜 현지인 만나기","layers.l3.sub":"고향을 아는 호스트들",
+    "layers.l3.desc":"경기도의 장인·농부·요리사·예술가들이 NORI 여행자를 위해 문을 엽니다. 진짜 연결, 진짜 추억.",
+    "layers.l3.f1":"50개+ 검증된 로컬 호스트","layers.l3.f2":"실시간 예약·결제","layers.l3.f3":"다국어 호스트 지원","layers.l3.f4":"리뷰 기반 신뢰 커뮤니티",
+    "courses.tag":"현지 체험","courses.title":"경기도 탐험",
+    "filter.all":"전체","filter.craft":"🏺 공예","filter.nature":"🌿 자연","filter.history":"🏯 역사","filter.food":"🍜 음식",
+    "course1.badge":"⭐ 인기 선택","course1.dur":"⏱ 3시간","course1.loc":"📍 이천, 경기도","course1.title":"전통 청자 도자기 워크숍","course1.desc":"한국 도자기의 수도 이천에서 5대째 내려오는 도예 장인과 함께 나만의 작품을 만들어 보세요.","course1.price":"<strong>₩45,000</strong>부터",
+    "course2.badge":"🔥 인기","course2.dur":"⏱ 하루 종일","course2.loc":"📍 양평, 경기도","course2.title":"유기농 팜스테이 & 벼 수확","course2.desc":"산 전망에서 눈을 뜨고, 유기농 쌀을 수확하고, 현지 가족과 함께하는 팜투테이블 점심을 즐기세요.","course2.price":"<strong>₩85,000</strong>부터",
+    "course3.badge":"🏛 유네스코","course3.dur":"⏱ 2시간","course3.loc":"📍 수원, 경기도","course3.title":"화성행궁 비밀 투어","course3.desc":"역사학자 가이드와 함께 18세기 유네스코 세계문화유산 화성의 비밀을 탐험하세요.","course3.price":"<strong>₩35,000</strong>부터",
+    "course4.badge":"👨‍🍳 셰프 동행","course4.dur":"⏱ 2.5시간","course4.loc":"📍 가평, 경기도","course4.title":"숲속 막걸리 & 한국식 BBQ","course4.desc":"산속에서 전통 쌀 막걸리를 빚고 현지 셰프와 함께 숯불에 고기를 구워보세요.","course4.price":"<strong>₩65,000</strong>부터",
+    "course5.badge":"✨ 신규","course5.dur":"⏱ 4시간","course5.loc":"📍 하남, 경기도","course5.title":"장인과 함께하는 한지 공예","course5.desc":"인증된 한지 장인과 함께 아름다운 전통 한지 공예품을 만들고 집으로 가져가세요.","course5.price":"<strong>₩55,000</strong>부터",
+    "course6.badge":"🌱 에코","course6.dur":"⏱ 반나절","course6.loc":"📍 남양주, 경기도","course6.title":"북한강 카약 & 피크닉","course6.desc":"아름다운 강 풍경 속에서 카약을 타고, 숨겨진 강가 명소에 들러 전통 한국식 피크닉을 즐기세요.","course6.price":"<strong>₩75,000</strong>부터",
+    "hosts.tag":"로컬 호스트","hosts.title":"가이드를 만나보세요","hosts.sub":"진짜 사람들, 진짜 이야기. NORI의 검증된 로컬 호스트들이 전 세계 여행자에게 그들의 세계를 열어드립니다.",
+    "hosts.guests":"게스트","hosts.rating":"평점","hosts.response":"응답률",
+    "host1.name":"도예 장인 김도현","host1.role":"5대째 도예 장인","host1.loc":"📍 이천 · 2019년부터 활동","host1.desc":"\"200년간 이어온 흙과의 인연. 세상이 우리 이야기를 만져보길 원합니다.\"",
+    "host2.name":"박선희","host2.role":"유기농 농부 & 요리사","host2.loc":"📍 양평 · 2021년부터 활동","host2.desc":"\"제가 만드는 모든 음식에는 경기도의 계절 맛이 담겨 있어요. 직접 맛보러 오세요.\"",
+    "host3.name":"이지영 교수","host3.role":"역사학자 & 문화재 가이드","host3.loc":"📍 수원 · 2020년부터 활동","host3.desc":"\"화성에는 교과서에 없는 비밀이 있어요. 저와 함께 걸으며 발견해 보세요.\"",
+    "host4.name":"최민준 셰프","host4.role":"전통 음식 예술가","host4.loc":"📍 가평 · 2022년부터 활동","host4.desc":"\"한국 산악 요리는 잊혀가는 예술입니다. 제 주방이 교실이에요.\"",
+    "multilang.tag":"8개 언어 지원","multilang.title":"당신의 언어로 말합니다",
+    "multilang.sub":"NORI는 여러분과 경기도의 가장 진정한 현지 체험 사이의 모든 언어 장벽을 없앱니다.",
+    "multilang.desc":"인천공항에 도착하는 순간부터 경기도 여행을 시작하세요. NORI의 다국어 플랫폼이 모든 언어 장벽을 해소합니다.",
+    "multilang.btn":"🌏 내 언어로 탐험하기",
+    "about.founderTitle":"창업자 & CEO, NORI","about.cred1":"경제학·문화예술 분야 저서 21권","about.cred2":"하버드 경제학 졸업 강연자","about.cred3":"25년간 미술 전시 기획·큐레이션","about.cred4":"지역 문화와 글로벌 여행자를 잇는 가교",
+    "about.books":"권 출간","about.art":"년 미술 경력",
+    "about.tag":"우리의 비전","about.title":"왜 NORI인가?",
+    "about.sub":"NORI(노리)는 한국어로 '놀이'를 뜻합니다 — 여행이 언제나 간직해야 할 즐겁고 호기심 넘치는 정신.",
+    "pillar1.title":"로컬 우선","pillar1.desc":"모든 체험은 경기도 지역 커뮤니티와 함께, 그리고 그들을 위해 설계됩니다.",
+    "pillar2.title":"진정한 글로벌","pillar2.desc":"8개 언어, 장벽 없음. 세계가 경기도를 환영합니다.",
+    "pillar3.title":"완전 검증","pillar3.desc":"모든 호스트와 모든 체험은 NORI에 의해 리뷰되고 인증됩니다.",
+    "pillar4.title":"지속가능성","pillar4.desc":"경기도의 자연을 보호하면서 지역 경제를 지원합니다.",
+    "footer.brand":"경기도의 로컬 보물을 전 세계 여행자에게 전합니다. 경기관광공사 지원.",
+    "footer.col1.title":"탐험","footer.col1.l1":"전체 코스","footer.col1.l2":"공예 & 예술","footer.col1.l3":"자연 & 농촌","footer.col1.l4":"역사 & 문화","footer.col1.l5":"음식 & 음료",
+    "footer.col2.title":"호스트","footer.col2.l1":"호스트 되기","footer.col2.l2":"호스트 가이드","footer.col2.l3":"호스트 커뮤니티","footer.col2.l4":"수익",
+    "footer.col3.title":"회사","footer.col3.l1":"NORI 소개","footer.col3.l2":"보도자료","footer.col3.l3":"채용","footer.col3.l4":"문의",
+    "footer.copy":"© 2026 NORI. All rights reserved. | 경기관광공사 지원"
   },
   ja: {
-    "nav.platform": "プラットフォーム", "nav.explore": "探索", "nav.hosts": "ホスト", "nav.about": "について", "nav.cta": "探索を始める",
-    "hero.badge": "仁川空港 → 京畿道 すぐ近く",
-    "hero.title": "韓国の<br><span class='accent'>隠れた</span><br><span class='accent2'>宝石</span>を発見",
-    "hero.desc": "NORIは外国人旅行者を京畿道のローカルな宝と直接つなぎます — 陶芸の村から農村体験まで、すべてあなたの言語で。",
-    "hero.btn1": "🗺 コースを探索", "hero.btn2": "ローカルホストに会う",
-    "hero.stat1": "市・郡", "hero.stat2": "対応言語", "hero.stat3": "ローカルホスト",
-    "phone.tag1": "利川陶芸", "phone.tag2": "農村滞在", "phone.tag3": "4.9 評価",
-    "phone.topTitle": "仁川空港近く", "phone.topLoc": "京畿道の体験",
-    "phone.card1.title": "利川陶芸ワークショップ", "phone.card1.sub": "⭐ 4.9 · 空港から45分", "phone.card1.tag": "新着",
-    "phone.card2.title": "楊平ファームステイ", "phone.card2.sub": "⭐ 4.8 · 自然リトリート", "phone.card2.tag": "人気",
-    "phone.card3.title": "華城行宮ウォーク", "phone.card3.sub": "⭐ 5.0 · ユネスコ遺産", "phone.card3.tag": "TOP",
-    "layers.tag": "NORIの仕組み", "layers.title": "3層体験",
-    "layers.sub": "仁川空港に着いた瞬間から、思い出を持ち帰るまで — NORIがすべてのステップをガイドします。",
-    "layers.l1.num": "01 — 発見", "layers.l1.title": "空港で始まる旅", "layers.l1.sub": "仁川空港 → 京畿道",
-    "layers.l1.desc": "着陸した瞬間にQRコードをスキャン。NORIが距離・興味・旅スタイルに合わせて京畿道の観光地を即座に提案します。",
-    "layers.l1.f1": "QR / NFC即時オンボーディング", "layers.l1.f2": "8言語リアルタイムサポート", "layers.l1.f3": "位置情報に基づくレコメンド", "layers.l1.f4": "交通・道案内統合",
-    "layers.l2.num": "02 — 探索", "layers.l2.title": "厳選された旅程", "layers.l2.sub": "地元の物語を、あなたのペースで",
-    "layers.l2.desc": "陶芸・農業・歴史・ストリートフードなど10以上のテーマコースから選択。直接予約または信頼できるパートナー経由で予約できます。",
-    "layers.l2.f1": "10以上のテーマコース", "layers.l2.f2": "直販・委託予約", "layers.l2.f3": "認定旅行商品", "layers.l2.f4": "地元イベントリアルタイム情報",
-    "layers.l3.num": "03 — つながり", "layers.l3.title": "本物の地元民に会う", "layers.l3.sub": "地元を知るホストたち",
-    "layers.l3.desc": "京畿道の職人・農家・シェフ・アーティストがNORI旅行者のために扉を開きます。本物のつながり、本物の思い出。",
-    "layers.l3.f1": "50以上の認定ローカルホスト", "layers.l3.f2": "リアルタイム予約・決済", "layers.l3.f3": "多言語ホストサポート", "layers.l3.f4": "レビュー済み信頼コミュニティ",
-    "courses.tag": "地元体験", "courses.title": "京畿道を探索",
-    "filter.all": "すべて", "filter.craft": "🏺 工芸", "filter.nature": "🌿 自然", "filter.history": "🏯 歴史", "filter.food": "🍜 グルメ",
-    "course1.badge": "⭐ 人気", "course1.dur": "⏱ 3時間", "course1.loc": "📍 利川, 京畿道",
-    "course1.title": "伝統青磁陶芸ワークショップ", "course1.desc": "韓国陶芸の都・利川で5代目の陶芸名人とともに自分だけの作品を作りましょう。", "course1.price": "<strong>₩45,000</strong>から",
-    "course2.badge": "🔥 人気", "course2.dur": "⏱ 終日", "course2.loc": "📍 楊平, 京畿道",
-    "course2.title": "有機農場滞在 & 稲刈り体験", "course2.desc": "山の景色を眺めながら目覚め、有機米を収穫し、地元の家族とのファームトゥテーブルランチを楽しみましょう。", "course2.price": "<strong>₩85,000</strong>から",
-    "course3.badge": "🏛 ユネスコ", "course3.dur": "⏱ 2時間", "course3.loc": "📍 水原, 京畿道",
-    "course3.title": "華城行宮 秘密ウォーク", "course3.desc": "歴史家ガイドと18世紀のユネスコ世界遺産・華城を探索 — 多くの観光客が知らない秘密の物語。", "course3.price": "<strong>₩35,000</strong>から",
-    "course4.badge": "👨‍🍳 シェフ同行", "course4.dur": "⏱ 2.5時間", "course4.loc": "📍 加平, 京畿道",
-    "course4.title": "森のマッコリ & 韓国BBQ", "course4.desc": "山の中で伝統的な米酒を醸造し、地元のシェフと炭火で肉を焼きましょう。", "course4.price": "<strong>₩65,000</strong>から",
-    "course5.badge": "✨ 新着", "course5.dur": "⏱ 4時間", "course5.loc": "📍 河南, 京畿道",
-    "course5.title": "名匠と韓紙アート", "course5.desc": "認定された韓紙名匠と美しい伝統韓紙工芸品を作成。作品を持ち帰れます。", "course5.price": "<strong>₩55,000</strong>から",
-    "course6.badge": "🌱 エコ", "course6.dur": "⏱ 半日", "course6.loc": "📍 南楊州, 京畿道",
-    "course6.title": "北漢江カヤック & ピクニック", "course6.desc": "絶景の川沿いをカヤックで漕ぎ、隠れた川岸スポットに立ち寄り、伝統的な韓国式ピクニックを楽しみましょう。", "course6.price": "<strong>₩75,000</strong>から",
-    "hosts.tag": "ローカルホスト", "hosts.title": "ガイドに会いましょう", "hosts.sub": "本物の人々、本物の物語。NORIの認定ローカルホストが世界中の旅行者に彼らの世界を開きます。",
-    "hosts.guests": "ゲスト", "hosts.rating": "評価", "hosts.response": "返信率",
-    "host1.name": "陶芸名人 キム・ドヒョン", "host1.role": "5代目陶芸名人", "host1.loc": "📍 利川 · 2019年から活動", "host1.desc": "「200年続く土との縁。世界に私たちの物語を伝えたい。」",
-    "host2.name": "パク・スンヒ", "host2.role": "有機農家 & シェフ", "host2.loc": "📍 楊平 · 2021年から活動", "host2.desc": "「私が作る料理にはすべて京畿道の季節の味が込められています。ぜひ味わいに来てください。」",
-    "host3.name": "イ・ジヨン教授", "host3.role": "歴史家 & 文化遺産ガイド", "host3.loc": "📍 水原 · 2020年から活動", "host3.desc": "「華城には教科書に載っていない秘密があります。私と一緒に歩いて発見しましょう。」",
-    "host4.name": "チェ・ミンジュン シェフ", "host4.role": "伝統料理アーティスト", "host4.loc": "📍 加平 · 2022年から活動", "host4.desc": "「韓国の山岳料理は忘れられゆく芸術です。私のキッチンが教室です。」",
-    "multilang.tag": "8言語対応", "multilang.title": "あなたの言語で話します",
-    "multilang.sub": "NORIはあなたと京畿道の最も本格的な地元体験の間のすべての言語の壁を取り除きます。",
-    "multilang.desc": "仁川空港に到着した瞬間から京畿道の旅を始めましょう。NORIの多言語プラットフォームがあらゆる言語の壁を取り除きます。",
-    "multilang.btn": "🌏 あなたの言語で探索",
-    "about.founderTitle": "創業者 & CEO, NORI", "about.cred1": "経済学・文化芸術分野の著書21冊", "about.cred2": "ハーバード経済学卒業スピーチ", "about.cred3": "25年間の美術展企画・キュレーション", "about.cred4": "地域文化と世界の旅行者をつなぐ架け橋",
-    "about.books": "冊出版", "about.art": "年の芸術経験",
-    "about.tag": "私たちのビジョン", "about.title": "なぜNORIなのか？",
-    "about.sub": "NORI（노리）は韓国語で「遊び」を意味します — 旅行が常に持つべき喜びと好奇心の精神。京畿道の素晴らしい地元文化を共有できる世界クラスのプラットフォームが必要だったので、NORIを作りました。",
-    "pillar1.title": "地元優先", "pillar1.desc": "すべての体験は京畿道の地元コミュニティとともに、そのために設計されます。",
-    "pillar2.title": "真のグローバル", "pillar2.desc": "8言語、ゼロの壁。世界が京畿道を歓迎します。",
-    "pillar3.title": "完全認定", "pillar3.desc": "すべてのホストとすべての体験はNORIによってレビュー・認定されています。",
-    "pillar4.title": "サステナブル", "pillar4.desc": "京畿道の自然の美しさを守りながら地元経済を支援します。",
-    "footer.brand": "京畿道の地元の宝を世界中の旅行者に届けます。京畿観光公社サポート。",
-    "footer.col1.title": "探索", "footer.col1.l1": "全コース", "footer.col1.l2": "工芸 & アート", "footer.col1.l3": "自然 & 農村", "footer.col1.l4": "歴史 & 文化", "footer.col1.l5": "グルメ & ドリンク",
-    "footer.col2.title": "ホスト向け", "footer.col2.l1": "ホストになる", "footer.col2.l2": "ホストガイドライン", "footer.col2.l3": "ホストコミュニティ", "footer.col2.l4": "収益",
-    "footer.col3.title": "会社情報", "footer.col3.l1": "NORIについて", "footer.col3.l2": "プレス", "footer.col3.l3": "採用", "footer.col3.l4": "お問い合わせ",
-    "footer.copy": "© 2026 NORI. All rights reserved. | 京畿観光公社サポート"
+    "nav.platform":"プラットフォーム","nav.explore":"探索","nav.hosts":"ホスト","nav.about":"について","nav.cta":"探索を始める",
+    "hero.badge":"仁川空港 → 京畿道 すぐ近く",
+    "hero.title":"韓国の<br><span class='accent'>隠れた</span><br><span class='accent2'>宝石</span>を発見",
+    "hero.desc":"NORIは外国人旅行者を京畿道のローカルな宝と直接つなぎます。",
+    "hero.btn1":"🗺 コースを探索","hero.btn2":"ローカルホストに会う",
+    "hero.stat1":"市・郡","hero.stat2":"対応言語","hero.stat3":"ローカルホスト",
+    "phone.tag1":"利川陶芸","phone.tag2":"農村滞在","phone.tag3":"4.9 評価",
+    "phone.topTitle":"仁川空港近く","phone.topLoc":"京畿道の体験",
+    "phone.card1.title":"利川陶芸ワークショップ","phone.card1.sub":"⭐ 4.9 · 空港から45分","phone.card1.tag":"新着",
+    "phone.card2.title":"楊平ファームステイ","phone.card2.sub":"⭐ 4.8 · 自然リトリート","phone.card2.tag":"人気",
+    "phone.card3.title":"華城行宮ウォーク","phone.card3.sub":"⭐ 5.0 · ユネスコ遺産","phone.card3.tag":"TOP",
+    "layers.tag":"NORIの仕組み","layers.title":"3層体験",
+    "layers.sub":"仁川空港に着いた瞬間から、思い出を持ち帰るまで — NORIがすべてのステップをガイドします。",
+    "layers.l1.num":"01 — 発見","layers.l1.title":"空港で始まる旅","layers.l1.sub":"仁川空港 → 京畿道",
+    "layers.l1.desc":"着陸した瞬間にQRコードをスキャン。NORIが京畿道の観光地を即座に提案します。",
+    "layers.l1.f1":"QR / NFC即時オンボーディング","layers.l1.f2":"8言語リアルタイムサポート","layers.l1.f3":"位置情報に基づくレコメンド","layers.l1.f4":"交通・道案内統合",
+    "layers.l2.num":"02 — 探索","layers.l2.title":"厳選された旅程","layers.l2.sub":"地元の物語を、あなたのペースで",
+    "layers.l2.desc":"陶芸・農業・歴史・ストリートフードなど10以上のテーマコースから選択。",
+    "layers.l2.f1":"10以上のテーマコース","layers.l2.f2":"直販・委託予約","layers.l2.f3":"認定旅行商品","layers.l2.f4":"地元イベントリアルタイム情報",
+    "layers.l3.num":"03 — つながり","layers.l3.title":"本物の地元民に会う","layers.l3.sub":"地元を知るホストたち",
+    "layers.l3.desc":"京畿道の職人・農家・シェフ・アーティストがNORI旅行者のために扉を開きます。",
+    "layers.l3.f1":"50以上の認定ローカルホスト","layers.l3.f2":"リアルタイム予約・決済","layers.l3.f3":"多言語ホストサポート","layers.l3.f4":"レビュー済み信頼コミュニティ",
+    "courses.tag":"地元体験","courses.title":"京畿道を探索",
+    "filter.all":"すべて","filter.craft":"🏺 工芸","filter.nature":"🌿 自然","filter.history":"🏯 歴史","filter.food":"🍜 グルメ",
+    "course1.badge":"⭐ 人気","course1.dur":"⏱ 3時間","course1.loc":"📍 利川, 京畿道","course1.title":"伝統青磁陶芸ワークショップ","course1.desc":"韓国陶芸の都・利川で5代目の陶芸名人とともに自分だけの作品を作りましょう。","course1.price":"<strong>₩45,000</strong>から",
+    "course2.badge":"🔥 人気","course2.dur":"⏱ 終日","course2.loc":"📍 楊平, 京畿道","course2.title":"有機農場滞在 & 稲刈り体験","course2.desc":"山の景色を眺めながら目覚め、有機米を収穫し、地元の家族とのランチを楽しみましょう。","course2.price":"<strong>₩85,000</strong>から",
+    "course3.badge":"🏛 ユネスコ","course3.dur":"⏱ 2時間","course3.loc":"📍 水原, 京畿道","course3.title":"華城行宮 秘密ウォーク","course3.desc":"歴史家ガイドと18世紀のユネスコ世界遺産・華城を探索。","course3.price":"<strong>₩35,000</strong>から",
+    "course4.badge":"👨‍🍳 シェフ同行","course4.dur":"⏱ 2.5時間","course4.loc":"📍 加平, 京畿道","course4.title":"森のマッコリ & 韓国BBQ","course4.desc":"山の中で伝統的な米酒を醸造し、地元のシェフと炭火で肉を焼きましょう。","course4.price":"<strong>₩65,000</strong>から",
+    "course5.badge":"✨ 新着","course5.dur":"⏱ 4時間","course5.loc":"📍 河南, 京畿道","course5.title":"名匠と韓紙アート","course5.desc":"認定された韓紙名匠と美しい伝統韓紙工芸品を作成。","course5.price":"<strong>₩55,000</strong>から",
+    "course6.badge":"🌱 エコ","course6.dur":"⏱ 半日","course6.loc":"📍 南楊州, 京畿道","course6.title":"北漢江カヤック & ピクニック","course6.desc":"絶景の川沿いをカヤックで漕ぎ、伝統的な韓国式ピクニックを楽しみましょう。","course6.price":"<strong>₩75,000</strong>から",
+    "hosts.tag":"ローカルホスト","hosts.title":"ガイドに会いましょう","hosts.sub":"本物の人々、本物の物語。NORIの認定ローカルホストが世界中の旅行者に彼らの世界を開きます。",
+    "hosts.guests":"ゲスト","hosts.rating":"評価","hosts.response":"返信率",
+    "host1.name":"陶芸名人 キム・ドヒョン","host1.role":"5代目陶芸名人","host1.loc":"📍 利川 · 2019年から活動","host1.desc":"「200年続く土との縁。世界に私たちの物語を伝えたい。」",
+    "host2.name":"パク・スンヒ","host2.role":"有機農家 & シェフ","host2.loc":"📍 楊平 · 2021年から活動","host2.desc":"「私が作る料理にはすべて京畿道の季節の味が込められています。」",
+    "host3.name":"イ・ジヨン教授","host3.role":"歴史家 & 文化遺産ガイド","host3.loc":"📍 水原 · 2020年から活動","host3.desc":"「華城には教科書に載っていない秘密があります。」",
+    "host4.name":"チェ・ミンジュン シェフ","host4.role":"伝統料理アーティスト","host4.loc":"📍 加平 · 2022年から活動","host4.desc":"「韓国の山岳料理は忘れられゆく芸術です。私のキッチンが教室です。」",
+    "multilang.tag":"8言語対応","multilang.title":"あなたの言語で話します",
+    "multilang.sub":"NORIはあなたと京畿道の体験の間のすべての言語の壁を取り除きます。",
+    "multilang.desc":"仁川空港に到着した瞬間から京畿道の旅を始めましょう。",
+    "multilang.btn":"🌏 あなたの言語で探索",
+    "about.founderTitle":"創業者 & CEO, NORI","about.cred1":"経済学・文化芸術分野の著書21冊","about.cred2":"ハーバード経済学卒業スピーチ","about.cred3":"25年間の美術展企画・キュレーション","about.cred4":"地域文化と世界の旅行者をつなぐ架け橋",
+    "about.books":"冊出版","about.art":"年の芸術経験",
+    "about.tag":"私たちのビジョン","about.title":"なぜNORIなのか？",
+    "about.sub":"NORI（노리）は韓国語で「遊び」を意味します。京畿道の素晴らしい地元文化を共有するために作りました。",
+    "pillar1.title":"地元優先","pillar1.desc":"すべての体験は京畿道の地元コミュニティのために設計されます。",
+    "pillar2.title":"真のグローバル","pillar2.desc":"8言語、ゼロの壁。世界が京畿道を歓迎します。",
+    "pillar3.title":"完全認定","pillar3.desc":"すべてのホストと体験はNORIにより認定されています。",
+    "pillar4.title":"サステナブル","pillar4.desc":"京畿道の自然を守りながら地元経済を支援します。",
+    "footer.brand":"京畿道の地元の宝を世界中の旅行者に届けます。京畿観光公社サポート。",
+    "footer.col1.title":"探索","footer.col1.l1":"全コース","footer.col1.l2":"工芸 & アート","footer.col1.l3":"自然 & 農村","footer.col1.l4":"歴史 & 文化","footer.col1.l5":"グルメ & ドリンク",
+    "footer.col2.title":"ホスト向け","footer.col2.l1":"ホストになる","footer.col2.l2":"ホストガイドライン","footer.col2.l3":"ホストコミュニティ","footer.col2.l4":"収益",
+    "footer.col3.title":"会社情報","footer.col3.l1":"NORIについて","footer.col3.l2":"プレス","footer.col3.l3":"採用","footer.col3.l4":"お問い合わせ",
+    "footer.copy":"© 2026 NORI. All rights reserved. | 京畿観光公社サポート"
   },
   zh: {
-    "nav.platform": "平台", "nav.explore": "探索", "nav.hosts": "主持人", "nav.about": "关于我们", "nav.cta": "开始探索",
-    "hero.badge": "仁川机场 → 京畿道 近在咫尺",
-    "hero.title": "探索韩国<br><span class='accent'>隐藏的</span><br><span class='accent2'>珍宝</span>",
-    "hero.desc": "NORI将外国旅行者与京畿道的本地宝藏直接相连——从古老的陶瓷村到农场体验，全程以您的语言提供服务。",
-    "hero.btn1": "🗺 探索路线", "hero.btn2": "认识本地主持人",
-    "hero.stat1": "市·郡", "hero.stat2": "支持语言", "hero.stat3": "本地主持人",
-    "phone.tag1": "利川陶瓷", "phone.tag2": "农场住宿", "phone.tag3": "4.9 评分",
-    "phone.topTitle": "仁川机场附近", "phone.topLoc": "京畿道体验",
-    "phone.card1.title": "利川陶瓷工作坊", "phone.card1.sub": "⭐ 4.9 · 距机场45分钟", "phone.card1.tag": "新品",
-    "phone.card2.title": "杨平农场住宿", "phone.card2.sub": "⭐ 4.8 · 自然度假", "phone.card2.tag": "热门",
-    "phone.card3.title": "华城行宫徒步", "phone.card3.sub": "⭐ 5.0 · 世界遗产", "phone.card3.tag": "TOP",
-    "layers.tag": "NORI如何运作", "layers.title": "三层体验",
-    "layers.sub": "从您降落仁川机场的那一刻到带着回忆回家 — NORI引导每一步。",
-    "layers.l1.num": "01 — 发现", "layers.l1.title": "从机场出发", "layers.l1.sub": "仁川机场 → 京畿道",
-    "layers.l1.desc": "一落地就扫描二维码。NORI根据距离、兴趣和旅行风格，即时向您推荐京畿道景点。",
-    "layers.l1.f1": "QR / NFC即时引导", "layers.l1.f2": "8语言实时支持", "layers.l1.f3": "基于位置的智能推荐", "layers.l1.f4": "交通导航整合",
-    "layers.l2.num": "02 — 探索", "layers.l2.title": "精选旅程", "layers.l2.sub": "本地故事，您的节奏",
-    "layers.l2.desc": "从陶瓷、农耕、历史、街头美食等10余个主题路线中选择。直接预订或通过可信赖的本地合作伙伴预订。",
-    "layers.l2.f1": "10余个精选本地主题", "layers.l2.f2": "直销·委托预订", "layers.l2.f3": "认证旅游产品", "layers.l2.f4": "本地活动实时资讯",
-    "layers.l3.num": "03 — 连接", "layers.l3.title": "认识真正的本地人", "layers.l3.sub": "了解家乡的主持人们",
-    "layers.l3.desc": "京畿道的工匠、农民、厨师和艺术家专为NORI旅行者打开大门。真实的连接，真实的回忆。",
-    "layers.l3.f1": "50余位认证本地主持人", "layers.l3.f2": "实时预订·支付", "layers.l3.f3": "多语言主持人支持", "layers.l3.f4": "评价·可信社区",
-    "courses.tag": "本地体验", "courses.title": "探索京畿道",
-    "filter.all": "全部", "filter.craft": "🏺 手工艺", "filter.nature": "🌿 自然", "filter.history": "🏯 历史", "filter.food": "🍜 美食",
-    "course1.badge": "⭐ 热门推荐", "course1.dur": "⏱ 3小时", "course1.loc": "📍 利川, 京畿道",
-    "course1.title": "传统青瓷陶瓷工作坊", "course1.desc": "在韩国陶瓷之都利川，与第五代陶瓷大师一起塑造您的专属作品。", "course1.price": "起价 <strong>₩45,000</strong>",
-    "course2.badge": "🔥 热门", "course2.dur": "⏱ 全天", "course2.loc": "📍 杨平, 京畿道",
-    "course2.title": "有机农场住宿 & 收割水稻", "course2.desc": "在山景中醒来，收割有机水稻，与当地家庭共享从农场到餐桌的午餐。", "course2.price": "起价 <strong>₩85,000</strong>",
-    "course3.badge": "🏛 世界遗产", "course3.dur": "⏱ 2小时", "course3.loc": "📍 水原, 京畿道",
-    "course3.title": "华城行宫秘密徒步", "course3.desc": "与历史学家导游探索18世纪联合国教科文组织世界遗产华城——大多数游客从未听说的秘密。", "course3.price": "起价 <strong>₩35,000</strong>",
-    "course4.badge": "👨‍🍳 主厨带队", "course4.dur": "⏱ 2.5小时", "course4.loc": "📍 加平, 京畿道",
-    "course4.title": "森林马格利酒 & 韩式BBQ", "course4.desc": "在山中酿造传统米酒，与本地主厨一起用炭火烤制当地肉类。", "course4.price": "起价 <strong>₩65,000</strong>",
-    "course5.badge": "✨ 新品", "course5.dur": "⏱ 4小时", "course5.loc": "📍 河南, 京畿道",
-    "course5.title": "与大师共创韩纸艺术", "course5.desc": "与认证韩纸大师一起创作美丽的传统韩纸工艺品，将作品带回家。", "course5.price": "起价 <strong>₩55,000</strong>",
-    "course6.badge": "🌱 生态", "course6.dur": "⏱ 半天", "course6.loc": "📍 南杨州, 京畿道",
-    "course6.title": "北汉江皮划艇 & 野餐", "course6.desc": "在壮丽的江景中划行皮划艇，停靠隐秘的江边景点，享用传统韩式野餐。", "course6.price": "起价 <strong>₩75,000</strong>",
-    "hosts.tag": "本地主持人", "hosts.title": "认识您的向导", "hosts.sub": "真实的人，真实的故事。NORI认证的本地主持人向来自全球的好奇旅行者开放他们的世界。",
-    "hosts.guests": "游客", "hosts.rating": "评分", "hosts.response": "响应率",
-    "host1.name": "陶瓷大师 金度铉", "host1.role": "第五代陶瓷大师", "host1.loc": "📍 利川 · 2019年起活跃", "host1.desc": "「我家传承制陶200年。我希望世界能触摸到我们的故事。」",
-    "host2.name": "朴善熙", "host2.role": "有机农民 & 厨师", "host2.loc": "📍 杨平 · 2021年起活跃", "host2.desc": "「我做的每一道菜都承载着京畿道四季的味道。来亲口品尝吧。」",
-    "host3.name": "李知英教授", "host3.role": "历史学家 & 遗址导游", "host3.loc": "📍 水原 · 2020年起活跃", "host3.desc": "「华城有教科书上没有的秘密。和我一起走，去发现它们。」",
-    "host4.name": "崔民俊主厨", "host4.role": "传统美食艺术家", "host4.loc": "📍 加平 · 2022年起活跃", "host4.desc": "「韩国山地料理是一门正在消逝的艺术。我的厨房就是课堂。」",
-    "multilang.tag": "支持8种语言", "multilang.title": "我们说您的语言",
-    "multilang.sub": "NORI消除您与京畿道最地道的本地体验之间的所有语言障碍。",
-    "multilang.desc": "从落地仁川机场的那一刻起开始京畿道之旅。NORI的多语言平台消除所有语言障碍，带来纯粹的本地探索体验。",
-    "multilang.btn": "🌏 用您的语言探索",
-    "about.founderTitle": "创始人 & CEO, NORI", "about.cred1": "经济学与文化艺术领域著作21本", "about.cred2": "哈佛经济学毕业典礼演讲嘉宾", "about.cred3": "25年艺术展览策划与策展经验", "about.cred4": "架起本地文化与全球旅行者之间的桥梁",
-    "about.books": "本著作", "about.art": "年艺术经验",
-    "about.tag": "我们的愿景", "about.title": "为什么是NORI？",
-    "about.sub": "NORI（노리）在韩语中意为「游玩」——我们相信旅行应永远携带的那种喜悦与好奇。我们创建NORI，是因为京畿道令人惊叹的本地文化值得一个世界级平台来分享。",
-    "pillar1.title": "本地优先", "pillar1.desc": "每一个体验都是与京畿道本地社区共同设计，并为其服务的。",
-    "pillar2.title": "真正全球化", "pillar2.desc": "8种语言，零障碍。世界在京畿道欢迎您。",
-    "pillar3.title": "完全认证", "pillar3.desc": "每位主持人、每个体验都经过NORI审核和认证。",
-    "pillar4.title": "可持续发展", "pillar4.desc": "在保护京畿道自然美景的同时支持本地经济。",
-    "footer.brand": "将京畿道的本地宝藏传递给来自世界各地的旅行者。京畿观光公社支持。",
-    "footer.col1.title": "探索", "footer.col1.l1": "全部路线", "footer.col1.l2": "手工艺 & 艺术", "footer.col1.l3": "自然 & 农村", "footer.col1.l4": "历史 & 文化", "footer.col1.l5": "美食 & 饮品",
-    "footer.col2.title": "主持人", "footer.col2.l1": "成为主持人", "footer.col2.l2": "主持人指南", "footer.col2.l3": "主持人社区", "footer.col2.l4": "收益",
-    "footer.col3.title": "公司", "footer.col3.l1": "关于NORI", "footer.col3.l2": "媒体", "footer.col3.l3": "招聘", "footer.col3.l4": "联系我们",
-    "footer.copy": "© 2026 NORI. 保留所有权利。| 京畿观光公社支持"
+    "nav.platform":"平台","nav.explore":"探索","nav.hosts":"主持人","nav.about":"关于我们","nav.cta":"开始探索",
+    "hero.badge":"仁川机场 → 京畿道 近在咫尺",
+    "hero.title":"探索韩国<br><span class='accent'>隐藏的</span><br><span class='accent2'>珍宝</span>",
+    "hero.desc":"NORI将外国旅行者与京畿道的本地宝藏直接相连，全程以您的语言提供服务。",
+    "hero.btn1":"🗺 探索路线","hero.btn2":"认识本地主持人",
+    "hero.stat1":"市·郡","hero.stat2":"支持语言","hero.stat3":"本地主持人",
+    "phone.tag1":"利川陶瓷","phone.tag2":"农场住宿","phone.tag3":"4.9 评分",
+    "phone.topTitle":"仁川机场附近","phone.topLoc":"京畿道体验",
+    "phone.card1.title":"利川陶瓷工作坊","phone.card1.sub":"⭐ 4.9 · 距机场45分钟","phone.card1.tag":"新品",
+    "phone.card2.title":"杨平农场住宿","phone.card2.sub":"⭐ 4.8 · 自然度假","phone.card2.tag":"热门",
+    "phone.card3.title":"华城行宫徒步","phone.card3.sub":"⭐ 5.0 · 世界遗产","phone.card3.tag":"TOP",
+    "layers.tag":"NORI如何运作","layers.title":"三层体验",
+    "layers.sub":"从您降落仁川机场的那一刻到带着回忆回家 — NORI引导每一步。",
+    "layers.l1.num":"01 — 发现","layers.l1.title":"从机场出发","layers.l1.sub":"仁川机场 → 京畿道",
+    "layers.l1.desc":"一落地就扫描二维码。NORI根据距离、兴趣和旅行风格，即时推荐京畿道景点。",
+    "layers.l1.f1":"QR / NFC即时引导","layers.l1.f2":"8语言实时支持","layers.l1.f3":"基于位置的智能推荐","layers.l1.f4":"交通导航整合",
+    "layers.l2.num":"02 — 探索","layers.l2.title":"精选旅程","layers.l2.sub":"本地故事，您的节奏",
+    "layers.l2.desc":"从陶瓷、农耕、历史、街头美食等10余个主题路线中选择。",
+    "layers.l2.f1":"10余个精选本地主题","layers.l2.f2":"直销·委托预订","layers.l2.f3":"认证旅游产品","layers.l2.f4":"本地活动实时资讯",
+    "layers.l3.num":"03 — 连接","layers.l3.title":"认识真正的本地人","layers.l3.sub":"了解家乡的主持人们",
+    "layers.l3.desc":"京畿道的工匠、农民、厨师和艺术家专为NORI旅行者打开大门。",
+    "layers.l3.f1":"50余位认证本地主持人","layers.l3.f2":"实时预订·支付","layers.l3.f3":"多语言主持人支持","layers.l3.f4":"评价·可信社区",
+    "courses.tag":"本地体验","courses.title":"探索京畿道",
+    "filter.all":"全部","filter.craft":"🏺 手工艺","filter.nature":"🌿 自然","filter.history":"🏯 历史","filter.food":"🍜 美食",
+    "course1.badge":"⭐ 热门推荐","course1.dur":"⏱ 3小时","course1.loc":"📍 利川, 京畿道","course1.title":"传统青瓷陶瓷工作坊","course1.desc":"在韩国陶瓷之都利川，与第五代陶瓷大师一起塑造您的专属作品。","course1.price":"起价 <strong>₩45,000</strong>",
+    "course2.badge":"🔥 热门","course2.dur":"⏱ 全天","course2.loc":"📍 杨平, 京畿道","course2.title":"有机农场住宿 & 收割水稻","course2.desc":"在山景中醒来，收割有机水稻，与当地家庭共享农场午餐。","course2.price":"起价 <strong>₩85,000</strong>",
+    "course3.badge":"🏛 世界遗产","course3.dur":"⏱ 2小时","course3.loc":"📍 水原, 京畿道","course3.title":"华城行宫秘密徒步","course3.desc":"与历史学家导游探索18世纪联合国教科文组织世界遗产华城。","course3.price":"起价 <strong>₩35,000</strong>",
+    "course4.badge":"👨‍🍳 主厨带队","course4.dur":"⏱ 2.5小时","course4.loc":"📍 加平, 京畿道","course4.title":"森林马格利酒 & 韩式BBQ","course4.desc":"在山中酿造传统米酒，与本地主厨一起用炭火烤制当地肉类。","course4.price":"起价 <strong>₩65,000</strong>",
+    "course5.badge":"✨ 新品","course5.dur":"⏱ 4小时","course5.loc":"📍 河南, 京畿道","course5.title":"与大师共创韩纸艺术","course5.desc":"与认证韩纸大师一起创作美丽的传统韩纸工艺品，将作品带回家。","course5.price":"起价 <strong>₩55,000</strong>",
+    "course6.badge":"🌱 生态","course6.dur":"⏱ 半天","course6.loc":"📍 南杨州, 京畿道","course6.title":"北汉江皮划艇 & 野餐","course6.desc":"在壮丽的江景中划行皮划艇，享用传统韩式野餐。","course6.price":"起价 <strong>₩75,000</strong>",
+    "hosts.tag":"本地主持人","hosts.title":"认识您的向导","hosts.sub":"真实的人，真实的故事。NORI认证的本地主持人向来自全球的旅行者开放他们的世界。",
+    "hosts.guests":"游客","hosts.rating":"评分","hosts.response":"响应率",
+    "host1.name":"陶瓷大师 金度铉","host1.role":"第五代陶瓷大师","host1.loc":"📍 利川 · 2019年起活跃","host1.desc":"「我家传承制陶200年。我希望世界能触摸到我们的故事。」",
+    "host2.name":"朴善熙","host2.role":"有机农民 & 厨师","host2.loc":"📍 杨平 · 2021年起活跃","host2.desc":"「我做的每一道菜都承载着京畿道四季的味道。」",
+    "host3.name":"李知英教授","host3.role":"历史学家 & 遗址导游","host3.loc":"📍 水原 · 2020年起活跃","host3.desc":"「华城有教科书上没有的秘密。和我一起去发现它们。」",
+    "host4.name":"崔民俊主厨","host4.role":"传统美食艺术家","host4.loc":"📍 加平 · 2022年起活跃","host4.desc":"「韩国山地料理是一门正在消逝的艺术。我的厨房就是课堂。」",
+    "multilang.tag":"支持8种语言","multilang.title":"我们说您的语言",
+    "multilang.sub":"NORI消除您与京畿道最地道体验之间的所有语言障碍。",
+    "multilang.desc":"从落地仁川机场的那一刻起开始京畿道之旅。",
+    "multilang.btn":"🌏 用您的语言探索",
+    "about.founderTitle":"创始人 & CEO, NORI","about.cred1":"经济学与文化艺术领域著作21本","about.cred2":"哈佛经济学毕业典礼演讲嘉宾","about.cred3":"25年艺术展览策划与策展经验","about.cred4":"架起本地文化与全球旅行者之间的桥梁",
+    "about.books":"本著作","about.art":"年艺术经验",
+    "about.tag":"我们的愿景","about.title":"为什么是NORI？",
+    "about.sub":"NORI（노리）在韩语中意为「游玩」。我们创建NORI，是因为京畿道令人惊叹的本地文化值得一个世界级平台来分享。",
+    "pillar1.title":"本地优先","pillar1.desc":"每一个体验都是为京畿道本地社区服务的。",
+    "pillar2.title":"真正全球化","pillar2.desc":"8种语言，零障碍。世界在京畿道欢迎您。",
+    "pillar3.title":"完全认证","pillar3.desc":"每位主持人、每个体验都经过NORI审核和认证。",
+    "pillar4.title":"可持续发展","pillar4.desc":"在保护京畿道自然美景的同时支持本地经济。",
+    "footer.brand":"将京畿道的本地宝藏传递给来自世界各地的旅行者。京畿观光公社支持。",
+    "footer.col1.title":"探索","footer.col1.l1":"全部路线","footer.col1.l2":"手工艺 & 艺术","footer.col1.l3":"自然 & 农村","footer.col1.l4":"历史 & 文化","footer.col1.l5":"美食 & 饮品",
+    "footer.col2.title":"主持人","footer.col2.l1":"成为主持人","footer.col2.l2":"主持人指南","footer.col2.l3":"主持人社区","footer.col2.l4":"收益",
+    "footer.col3.title":"公司","footer.col3.l1":"关于NORI","footer.col3.l2":"媒体","footer.col3.l3":"招聘","footer.col3.l4":"联系我们",
+    "footer.copy":"© 2026 NORI. 保留所有权利。| 京畿观光公社支持"
   }
 };
 
-function setLang(lang) {
-  // 버튼 active 상태
+// ══════════════════════════════════
+// i18n 엔진 — 핵심 수정: btn 인자로 받음
+// ══════════════════════════════════
+let currentLang = 'en';
+
+function setLang(lang, btn) {
+  currentLang = lang;
+  // nav 버튼 active
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-  // 플래그 active 상태 (nav 버튼 순서와 동일: EN=0, KO=1, JA=2, 中=3)
-  const flagMap = { en: 0, ko: 1, ja: 2, zh: 3 };
+  if (btn) btn.classList.add('active');
+  // multilang 섹션 플래그 active
+  const langFlagMap = { en:0, ko:1, zh:2, ja:3 };
   document.querySelectorAll('.lang-flag').forEach(f => f.classList.remove('active'));
   const flags = document.querySelectorAll('.lang-flag');
-  if (flags[flagMap[lang]]) flags[flagMap[lang]].classList.add('active');
+  const idx = langFlagMap[lang];
+  if (idx !== undefined && flags[idx]) flags[idx].classList.add('active');
 
-  const t = i18n[lang];
-  if (!t) return;
+  applyTranslations(lang);
+  updateChatLang(lang);
+}
 
-  // 일반 텍스트 교체
+function setLangFromFlag(lang, flagEl) {
+  currentLang = lang;
+  // multilang 섹션 플래그 active
+  document.querySelectorAll('.lang-flag').forEach(f => f.classList.remove('active'));
+  flagEl.classList.add('active');
+  // nav 버튼 active
+  const navBtnMap = { en:0, ko:1, ja:2, zh:3 };
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  const navBtns = document.querySelectorAll('.lang-btn');
+  const idx = navBtnMap[lang];
+  if (idx !== undefined && navBtns[idx]) navBtns[idx].classList.add('active');
+
+  applyTranslations(lang);
+  updateChatLang(lang);
+}
+
+function applyTranslations(lang) {
+  const t = i18n[lang] || i18n['en'];
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (t[key] !== undefined) el.textContent = t[key];
   });
-  // innerHTML 교체 (strong 태그 등 포함)
   document.querySelectorAll('[data-i18n-html]').forEach(el => {
     const key = el.getAttribute('data-i18n-html');
     if (t[key] !== undefined) el.innerHTML = t[key];
   });
 }
 
-// ── COURSE FILTER ──
+// ══════════════════════════════════
+// CHATBOT
+// ══════════════════════════════════
+let chatOpen = false;
+let chatLang = 'en';
+let chatHistory = [];
+let isTyping = false;
+
+const chatWelcome = {
+  en: "Hi! I'm NORI's AI travel guide 👋\n\nTell me what kind of experience you're looking for and I'll recommend the perfect Gyeonggi adventure for you!",
+  ko: "안녕하세요! NORI AI 여행 가이드입니다 👋\n\n어떤 체험을 원하시나요? 경기도의 완벽한 여행을 추천해 드릴게요!",
+  ja: "こんにちは！NORIのAIトラベルガイドです 👋\n\nどんな体験をお探しですか？最適な京畿道の旅をご提案します！",
+  zh: "您好！我是NORI的AI旅行向导 👋\n\n告诉我您想要什么样的体验，我来为您推荐完美的京畿道之旅！",
+  fr: "Bonjour! Je suis le guide IA de NORI 👋\n\nQuel type d'expérience recherchez-vous? Je vous recommanderai la parfaite aventure à Gyeonggi!",
+  de: "Hallo! Ich bin NORIs KI-Reiseführer 👋\n\nWas für ein Erlebnis suchen Sie? Ich empfehle Ihnen das perfekte Gyeonggi-Abenteuer!"
+};
+
+const quickBtnLabels = {
+  en: ["🏺 Pottery & Crafts","🌿 Nature & Farm","🏯 History","🍜 Food Tour","⏱ Near Airport"],
+  ko: ["🏺 도자기 & 공예","🌿 자연 & 농촌","🏯 역사 탐방","🍜 음식 투어","⏱ 공항 근처"],
+  ja: ["🏺 陶芸 & 工芸","🌿 自然 & 農村","🏯 歴史巡り","🍜 グルメツアー","⏱ 空港近く"],
+  zh: ["🏺 陶瓷 & 手工艺","🌿 自然 & 农场","🏯 历史探访","🍜 美食之旅","⏱ 机场附近"],
+  fr: ["🏺 Poterie & Artisanat","🌿 Nature & Ferme","🏯 Histoire","🍜 Tour Gastronomique","⏱ Près de l'aéroport"],
+  de: ["🏺 Töpferei & Handwerk","🌿 Natur & Bauernhof","🏯 Geschichte","🍜 Food Tour","⏱ Flughafennähe"]
+};
+
+const chatPlaceholders = {
+  en: "Ask me anything about Gyeonggi...",
+  ko: "경기도 여행에 대해 무엇이든 물어보세요...",
+  ja: "京畿道の旅について何でも聞いてください...",
+  zh: "关于京畿道的旅行，请随意提问...",
+  fr: "Posez-moi n'importe quelle question sur Gyeonggi...",
+  de: "Fragen Sie mich alles über Gyeonggi..."
+};
+
+function toggleChat() {
+  chatOpen = !chatOpen;
+  document.getElementById('chat-window').classList.toggle('open', chatOpen);
+  if (chatOpen) {
+    document.getElementById('chat-input').focus();
+    setTimeout(() => scrollChat(), 100);
+  }
+}
+
+function setChatLang(lang, btn) {
+  chatLang = lang;
+  document.querySelectorAll('.chat-lang-pill').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('chat-input').placeholder = chatPlaceholders[lang] || chatPlaceholders.en;
+  updateQuickBtns(lang);
+}
+
+function updateChatLang(lang) {
+  if (['en','ko','ja','zh','fr','de'].includes(lang)) {
+    chatLang = lang;
+    document.querySelectorAll('.chat-lang-pill').forEach(p => p.classList.remove('active'));
+    const pillMap = { en:0, ko:1, ja:2, zh:3, fr:4, de:5 };
+    const pills = document.querySelectorAll('.chat-lang-pill');
+    const idx = pillMap[lang];
+    if (idx !== undefined && pills[idx]) pills[idx].classList.add('active');
+    document.getElementById('chat-input').placeholder = chatPlaceholders[lang] || chatPlaceholders.en;
+    updateQuickBtns(lang);
+  }
+}
+
+function updateQuickBtns(lang) {
+  const labels = quickBtnLabels[lang] || quickBtnLabels.en;
+  const btns = document.querySelectorAll('.quick-btn');
+  btns.forEach((btn, i) => { if (labels[i]) btn.textContent = labels[i]; });
+}
+
+function sendQuick(btn) {
+  const text = btn.textContent;
+  sendMessage(text);
+}
+
+function sendMsg() {
+  const input = document.getElementById('chat-input');
+  const text = input.value.trim();
+  if (!text || isTyping) return;
+  input.value = '';
+  sendMessage(text);
+}
+
+function sendMessage(text) {
+  if (isTyping) return;
+  addMsg('user', text);
+  chatHistory.push({ role: 'user', content: text });
+  document.getElementById('quick-btns').style.display = 'none';
+  showTyping();
+  callClaude(text);
+}
+
+function addMsg(role, text) {
+  const msgs = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = `msg ${role}`;
+  if (role === 'bot') {
+    div.innerHTML = `<div class="msg-avatar">🗺</div><div class="msg-bubble">${text.replace(/\n/g,'<br>')}</div>`;
+  } else {
+    div.innerHTML = `<div class="msg-bubble">${text}</div>`;
+  }
+  msgs.appendChild(div);
+  scrollChat();
+}
+
+function showTyping() {
+  isTyping = true;
+  document.getElementById('chat-send-btn').disabled = true;
+  const msgs = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = 'msg bot'; div.id = 'typing-msg';
+  div.innerHTML = `<div class="msg-avatar">🗺</div><div class="msg-bubble"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
+  msgs.appendChild(div);
+  scrollChat();
+}
+
+function removeTyping() {
+  const t = document.getElementById('typing-msg');
+  if (t) t.remove();
+  isTyping = false;
+  document.getElementById('chat-send-btn').disabled = false;
+}
+
+function scrollChat() {
+  const msgs = document.getElementById('chat-messages');
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+async function callClaude(userMsg) {
+  const langInstructions = {
+    en: "Respond in English.",
+    ko: "한국어로 답변해 주세요.",
+    ja: "日本語で回答してください。",
+    zh: "请用中文回答。",
+    fr: "Répondez en français.",
+    de: "Antworten Sie auf Deutsch."
+  };
+
+  const systemPrompt = `You are NORI's AI travel guide for Gyeonggi-do, South Korea. 
+You help foreign travelers discover authentic local experiences in Gyeonggi's 31 cities and counties.
+
+Available experiences on NORI:
+1. Traditional Celadon Pottery Workshop - Icheon (3hrs, ₩45,000) ⭐4.9
+2. Organic Farm Stay & Rice Harvest - Yangpyeong (Full Day, ₩85,000) ⭐4.8  
+3. Hwaseong Fortress Secret Walk - Suwon (2hrs, ₩35,000) ⭐5.0 UNESCO
+4. Forest Makgeolli & Korean BBQ - Gapyeong (2.5hrs, ₩65,000) ⭐4.9
+5. Hanji Paper Art with a Master - Hanam (4hrs, ₩55,000) ⭐4.7
+6. Bukhan River Kayak & Picnic - Namyangju (Half Day, ₩75,000) ⭐4.8
+
+Local Hosts: Master Kim Dohyun (pottery), Park Sunhee (farm/chef), Prof. Lee Jiyoung (history), Chef Choi Minjun (food)
+
+Key info: NORI connects Incheon Airport directly to Gyeonggi local experiences. Multilingual (8 languages). Supported by Gyeonggi Tourism Organization.
+
+${langInstructions[chatLang] || langInstructions.en}
+
+Keep responses warm, helpful, and concise (2-4 short paragraphs max). Use emojis naturally. Always recommend specific NORI experiences when relevant.`;
+
+  try {
+    const messages = [
+      ...chatHistory.slice(-6),
+    ];
+
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: systemPrompt,
+        messages: messages
+      })
+    });
+
+    const data = await res.json();
+    removeTyping();
+
+    if (data.content && data.content[0]) {
+      const reply = data.content[0].text;
+      chatHistory.push({ role: 'assistant', content: reply });
+      addMsg('bot', reply);
+    } else {
+      addMsg('bot', getErrorMsg());
+    }
+  } catch (e) {
+    removeTyping();
+    addMsg('bot', getErrorMsg());
+  }
+}
+
+function getErrorMsg() {
+  const msgs = {
+    en: "Sorry, I'm having a connection issue. Please try again! 🙏",
+    ko: "죄송합니다, 연결에 문제가 생겼어요. 다시 시도해 주세요! 🙏",
+    ja: "申し訳ありません、接続に問題が発生しました。もう一度お試しください！ 🙏",
+    zh: "抱歉，连接出现问题。请再试一次！ 🙏",
+    fr: "Désolé, j'ai un problème de connexion. Veuillez réessayer! 🙏",
+    de: "Entschuldigung, ich habe ein Verbindungsproblem. Bitte versuchen Sie es erneut! 🙏"
+  };
+  return msgs[chatLang] || msgs.en;
+}
+
+// ══════════════════════════════════
+// SCROLL REVEAL
+// ══════════════════════════════════
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+reveals.forEach(r => observer.observe(r));
+
+// ══════════════════════════════════
+// COURSE FILTER
+// ══════════════════════════════════
 function filterCourse(btn, cat) {
   document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
@@ -1419,12 +1298,10 @@ function filterCourse(btn, cat) {
   });
 }
 
-// ── NAV SCROLL EFFECT ──
+// NAV SCROLL
 window.addEventListener('scroll', () => {
-  const nav = document.querySelector('nav');
-  nav.style.boxShadow = window.scrollY > 50 ? '0 4px 20px rgba(26,26,46,0.1)' : 'none';
+  document.querySelector('nav').style.boxShadow = window.scrollY > 50 ? '0 4px 20px rgba(26,26,46,0.1)' : 'none';
 });
 </script>
-
 </body>
 </html>
